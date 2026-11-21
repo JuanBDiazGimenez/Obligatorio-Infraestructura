@@ -1,0 +1,39 @@
+name: atracadero
+services:
+  redis:
+    image: redis:7.4-alpine
+    command: ["redis-server", "--port", "6739", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "-p", "6739", "PING"]
+      interval: 1s
+      timeout: 2s
+      retries: 30
+  coordinador:
+    build: .
+    image: atracadero-ada:local
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "[ \"$$(redis-cli -h redis -p 6739 --raw GET puerto:listo)\" = 1 ]"]
+      interval: 1s
+      timeout: 2s
+      retries: 30
+  barco1:
+    image: atracadero-ada:local
+    command: ["/app/barco", "1"]
+    depends_on:
+      coordinador:
+        condition: service_healthy
+  barco2:
+    image: atracadero-ada:local
+    command: ["/app/barco", "2"]
+    depends_on:
+      coordinador:
+        condition: service_healthy
+  barco3:
+    image: atracadero-ada:local
+    command: ["/app/barco", "3"]
+    depends_on:
+      coordinador:
+        condition: service_healthy
