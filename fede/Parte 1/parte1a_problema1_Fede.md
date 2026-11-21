@@ -55,7 +55,7 @@ bateria_critica)
 Al ejecutar:
 
 ```bash
-bash don_drones_manager.sh bateria_critica
+bash don_drones_manager_fix.sh bateria_critica
 ```
 
 con el archivo `flota.csv` provisto, el resultado fue:
