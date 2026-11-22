@@ -8,15 +8,16 @@ No es una biblioteca de terceros que tengamos que descargar por separado.
 
 1. **Rango:** indica qué valores pueden salir. En el torneo usamos enteros entre
    **0 y 4** para la duración y entre **1 y 2** para elegir una de las dos parejas.
-2. **Paquete genérico:** es una plantilla. Al instanciarla le indicamos el tipo y
-   rango que necesitamos. Así obtenemos `Azar_Duracion` y `Azar_Ganador`.
+2. **Paquete genérico:** es una plantilla. En ambas instancias, `Azar_Duracion` y
+   `Azar_Ganador`, se indica el tipo `Integer`. El número generado se acota
+   después mediante `mod`, sin declarar subtipos.
 3. **Generator:** es el objeto que conserva el estado de una secuencia. No es un
    número sorteado ni la semilla: guarda la información necesaria para obtener
    sucesivos valores.
 4. **Reset:** inicializa ese estado. Sin semilla explícita usa una inicialización
    dependiente del tiempo. Con una semilla entera explícita se puede repetir la
    secuencia en la misma implementación, lo que sirve para pruebas.
-5. **Random:** devuelve el siguiente valor del rango y avanza el estado del
+5. **Random:** devuelve el siguiente entero y avanza el estado del
    generador. Se llama cada vez que necesitamos otro sorteo; **no se hace Reset
    antes de cada llamada**.
 
@@ -25,16 +26,29 @@ un algoritmo. No es azar físico ni garantiza resultados diferentes en cada
 llamada: dos partidos pueden durar lo mismo y puede ganar varias veces la primera
 pareja. Tampoco se garantiza que dos Reset muy próximos den secuencias distintas.
 
+## Cómo se acotan los valores sin subtype
+
+`Random` genera un `Integer`. `mod 5` obtiene un valor de 0 a 4; `mod 2 + 1`
+obtiene 1 o 2. En Ada, con divisor positivo, `mod` produce un resultado no
+negativo incluso si el entero sorteado es negativo. No se usa `abs` ni se
+reintenta el sorteo. Es la adaptación del concepto de resto aritmético trabajado
+en clase, no un ejemplo docente textual del torneo. No se exige una duración
+mínima positiva ni un reparto exacto de frecuencias en una ejecución.
+
+Los partidos se representan mediante dos arreglos de enteros, `Parejas_A` y
+`Parejas_B`, inicializados con un `for` antes de activar las tasks. No se usa
+`record`. Para el partido I, las parejas son 2*I-1 y 2*I.
+
 ## Cómo se usa en este programa
 
 Cada cancha tiene dos generadores propios: uno para duración y otro para ganador.
 Los inicializa una vez al comenzar con `Reset`. Dentro del cuerpo de la cancha:
 
-- Antes de jugar, `Azar_Duracion.Random (Generador_Duracion)` obtiene los segundos
+- Antes de jugar, `Azar_Duracion.Random (Generador_Duracion) mod 5` obtiene los segundos
   y los guarda en `Duracion`. Luego `delay Duration (Duracion)` simula el partido.
-- Después de la demora, `Azar_Ganador.Random (Generador_Ganador)` obtiene 1 o 2.
-  Un `if` selecciona `Partidos (Numero).Pareja_A` si sale 1, o
-  `Partidos (Numero).Pareja_B` si sale 2, y guarda esa pareja en `Ganador`.
+- Después de la demora, `Azar_Ganador.Random (Generador_Ganador) mod 2 + 1` obtiene 1 o 2.
+  Un `if` selecciona `Parejas_A (Numero)` si sale 1, o
+  `Parejas_B (Numero)` si sale 2, y guarda esa pareja en `Ganador`.
 
 El sorteo 1 significa la pareja A del partido y el 2 la pareja B, no necesariamente
 las parejas globales 1 y 2. Los sorteos se realizan directamente en la cancha.

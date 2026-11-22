@@ -8,15 +8,16 @@ No es una biblioteca de terceros que tengamos que descargar por separado.
 
 1. **Rango:** indica qué valores pueden salir. En el torneo usamos enteros entre
    **0 y 4** para la duración y entre **1 y 2** para elegir una de las dos parejas.
-2. **Paquete genérico:** es una plantilla. Al instanciarla le indicamos el tipo y
-   rango que necesitamos. Así obtenemos `Azar_Duracion` y `Azar_Ganador`.
+2. **Paquete genérico:** es una plantilla. En ambas instancias, `Azar_Duracion` y
+   `Azar_Ganador`, se indica el tipo `Integer`. El número generado se acota
+   después mediante `mod`, sin declarar subtipos.
 3. **Generator:** es el objeto que conserva el estado de una secuencia. No es un
    número sorteado ni la semilla: guarda la información necesaria para obtener
    sucesivos valores.
 4. **Reset:** inicializa ese estado. Sin semilla explícita usa una inicialización
    dependiente del tiempo. Con una semilla entera explícita se puede repetir la
    secuencia en la misma implementación, lo que sirve para pruebas.
-5. **Random:** devuelve el siguiente valor del rango y avanza el estado del
+5. **Random:** devuelve el siguiente entero y avanza el estado del
    generador. Se llama cada vez que necesitamos otro sorteo; **no se hace Reset
    antes de cada llamada**.
 
@@ -24,6 +25,19 @@ Se dice pseudoaleatorio porque una secuencia depende de su estado inicial y de
 un algoritmo. No es azar físico ni garantiza resultados diferentes en cada
 llamada: dos partidos pueden durar lo mismo y puede ganar varias veces la primera
 pareja. Tampoco se garantiza que dos Reset muy próximos den secuencias distintas.
+
+## Cómo se acotan los valores sin subtype
+
+`Random` genera un `Integer`. `mod 5` obtiene un valor de 0 a 4; `mod 2 + 1`
+obtiene 1 o 2. En Ada, con divisor positivo, `mod` produce un resultado no
+negativo incluso si el entero sorteado es negativo. No se usa `abs` ni se
+reintenta el sorteo. Es la adaptación del concepto de resto aritmético trabajado
+en clase, no un ejemplo docente textual del torneo. No se exige una duración
+mínima positiva ni un reparto exacto de frecuencias en una ejecución.
+
+Los partidos se representan mediante dos arreglos de enteros, `Parejas_A` y
+`Parejas_B`, inicializados con un `for` antes de activar las tasks. No se usa
+`record`. Para el partido I, las parejas son 2*I-1 y 2*I.
 
 ## Cómo se usa en este programa
 
@@ -45,7 +59,7 @@ coordinación mediante dos funciones pequeñas:
 - Para que los partidos duren siempre dos segundos, `Elegir_Duracion` devolvería
   siempre 2, en lugar de pedir un valor a `Random`.
 - Para que gane siempre la primera pareja, `Elegir_Ganador` devolvería siempre
-  `Encuentro.Pareja_A`.
+  `Pareja_A`.
 - Para aplicar otra regla, por ejemplo favorecer a la pareja de menor número,
   se cambiaría solamente la elección del ganador.
 

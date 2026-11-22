@@ -119,16 +119,16 @@ def main():
             variante, cambios = re.subn(
                 r"   function Elegir_Duracion\n.*?   end Elegir_Duracion;",
                 "   function Elegir_Duracion\n"
-                "     (Generador : Azar_Duracion.Generator) return Segundos\n"
+                "     (Generador : Azar_Duracion.Generator) return Integer\n"
                 "   is\n      pragma Unreferenced (Generador);\n   begin\n"
                 f"      return {segundos};\n   end Elegir_Duracion;", rapida, flags=re.S)
             assert cambios == 1
             variante, cambios = re.subn(
                 r"   function Elegir_Ganador\n.*?   end Elegir_Ganador;",
                 "   function Elegir_Ganador\n"
-                "     (Encuentro : Partido; Generador : Azar_Ganador.Generator) return Id_Pareja\n"
-                "   is\n      pragma Unreferenced (Generador);\n   begin\n"
-                f"      return Encuentro.Pareja_{ganador};\n   end Elegir_Ganador;", variante, flags=re.S)
+                "     (Pareja_A, Pareja_B : Integer; Generador : Azar_Ganador.Generator) return Integer\n"
+                f"   is\n      pragma Unreferenced (Generador, Pareja_{'B' if ganador == 'A' else 'A'});\n   begin\n"
+                f"      return Pareja_{ganador};\n   end Elegir_Ganador;", variante, flags=re.S)
             assert cambios == 1
             compilar(carpeta, variante)
             comprobar(ejecutar(carpeta), segundos, ganador)

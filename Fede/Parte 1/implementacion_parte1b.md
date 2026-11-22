@@ -5,24 +5,23 @@
 Ejecutar con Bash en Linux o Git Bash:
 
 ```bash
-bash "Fede/Parte 1/don_drones.sh"
+cd "Fede/Parte 1"
+bash don_drones.sh
 ```
 
-También se puede entrar en la carpeta del script y ejecutar `bash don_drones.sh`.
+Los comandos anteriores parten de la raíz del repositorio.
 Para ejecución directa en Linux: `chmod +x don_drones.sh` y `./don_drones.sh`.
-El script se entrega con finales LF. Usa Bash y utilidades habituales: `dirname`,
-`mktemp`, `mv` y `rm`. No requiere Python ni otro lenguaje para funcionar.
+El script se entrega con finales LF. Usa Bash y comandos `grep`, `cut`, `sed` y `echo`. No requiere Python ni otro lenguaje para funcionar.
 
 - `don_drones.sh`: extensión independiente de los scripts de la parte a.
 - `flota.csv`: copia inicial de la flota provista, con las mismas cinco columnas.
 - `usuarios.csv`: se crea en el primer arranque, con `admin,admin`. Persiste los
   registros posteriores. No se regenera en cada inicio.
 
-Los archivos se buscan junto al script mediante `cd` y `dirname`, por lo que la
-carpeta desde la que se lanza el comando no cambia qué flota se modifica.
-Si falta `flota.csv`, el programa informa el problema y termina sin inventar datos.
-Para experimentar sin alterar la versión de trabajo, copiar el script y el CSV a
-otra carpeta. Las operaciones de alta, asignación y actualización cambian ese CSV.
+Los archivos se buscan con rutas relativas a la carpeta actual. Antes de ejecutar,
+entrar a la carpeta que contiene el script y los CSV. Si falta flota.csv, se informa
+el problema y se termina sin inventar datos. Para probar sin alterar la flota de
+trabajo, copiar el script y el CSV a otra carpeta, entrar en ella y ejecutar allí.
 
 ## Menús y responsabilidades
 
@@ -32,6 +31,7 @@ Cerrar sesión vuelve al primer menú; salir termina el proceso. Una entrada ago
 también finaliza, evitando un bucle que imprima menús indefinidamente.
 
 `leer` obtiene una línea conservando espacios y barras con `IFS= read -r`.
+Los mensajes se muestran con `echo`.
 `pedir_texto`, `pedir_bateria` y `pedir_disponibilidad` repiten la pregunta ante
 entradas inválidas. Las variables `local` limitan los datos auxiliares a su función.
 `RESPUESTA`, los datos encontrados del dron y los valores nuevos de batería y
@@ -46,18 +46,15 @@ para este ejercicio local: no es un sistema de autenticación para uso real.
 informa antes de asignar o pedir nuevos valores. El texto ingresado no se interpreta
 como expresión regular ni como comandos.
 
-`ingresar_dron` ofrece las cinco categorías. Busca el mayor sufijo de esa categoría
-y suma uno. Así, con la flota inicial, el siguiente Cargo es `CAR-006`. `10#` trata
-el sufijo como decimal aunque tenga ceros iniciales. `printf` con `%03d` da al menos
-tres cifras; no trunca números mayores a 999. El mismo criterio continúa después
+`ingresar_dron` ofrece las cinco categorías. La variable `categoria_valida` empieza en 0 y el `while` repite la pregunta mientras siga en 0. Una opción válida establece la categoría, el prefijo y el valor 1; una inválida muestra el mensaje y vuelve a preguntar. No se usan `break` ni `continue`.
+
+Para generar el ID, se extrae el sufijo con `cut`, se busca el mayor de la categoría y se suma uno. Así, con la flota inicial, el siguiente Cargo es `CAR-006`. Un contador comienza en cero y aumenta con un `while` hasta igualar el sufijo; así se obtiene el valor decimal sin evaluar directamente el texto con ceros iniciales dentro de una expresión aritmética. Los condicionales anteponen `00` si el número es menor a 10 y `0` si es menor a 100; desde 100 se usa el número completo, sin truncarlo. El mismo criterio continúa después
 de reiniciar porque lee los IDs persistidos.
 
-`guardar_actualizacion` reconstruye el CSV en un archivo temporal creado con
-`mktemp` y reemplaza la flota con `mv` cuando termina. Cambia batería y disponibilidad
-de la fila buscada, conserva categoría, modelo, orden y encabezado, y evita usar
-texto del usuario como una expresión de sustitución. Se usa en asignación y
-actualización. El alcance es una sesión del programa a la vez; no se implementó
-coordinación de escrituras entre varias instancias.
+`guardar_actualizacion` usa `sed -i`, como el script original. Selecciona la fila
+por ID, conserva categoría y modelo mediante grupos, y sustituye batería y
+disponibilidad. El script no administra un archivo temporal. Se usa para asignar
+y actualizar. El alcance sigue siendo una instancia a la vez.
 
 ## Reutilización de la parte a y validaciones
 
@@ -66,21 +63,37 @@ coordinación de escrituras entre varias instancias.
 disponibilidad a `No`, sin descontar batería porque la letra no lo pide.
 Con batería exactamente 20 no se asigna; no se cambió el umbral a `-ge`.
 
-`reporte_flota` mantiene el contador fuera de un pipeline. El bloque con llaves
-recibe la flota mediante `<`, consume el encabezado y recorre las filas en el shell
-actual, igual que la corrección de Fede en 1.a. Cuenta y reúne las filas con batería
-menor a 20 (`-lt`), mostrando primero el total y luego el detalle mediante
-`mostrar_dron`. Cuenta también los drones no disponibles, porque el criterio es la
-batería. La sustitución de comandos usada para formatear cada fila no modifica el
-contador. Con cero críticos, muestra cero sin filas adicionales.
+`reporte_flota` mantiene el contador fuera de un pipeline. Un primer recorrido
+con `while IFS=, read -r` cuenta las filas con batería menor a 20 y muestra el total.
+Un segundo recorrido muestra cada dron crítico mediante `mostrar_dron`. No se
+acumula un listado en una variable. Se cuentan también los drones no disponibles,
+porque el criterio es la batería. Con cero críticos se muestra cero sin detalle.
 
-Se admiten baterías enteras de 0 a 100, con hasta tres dígitos; `08` se guarda como
-8. No se admiten modelos, usuarios o contraseñas vacíos o compuestos solo por
-espacios. Se rechazan comas y retornos de carro porque el CSV simple no implementa
+Las validaciones de número y texto usan `grep -E` y condicionales. El resultado
+del filtro se captura mediante sustitución de comandos, como las consultas con
+`grep` del script original. Los menús conservan `case`, que ya figura en ese
+original. Las decisiones antes encadenadas con operadores lógicos se expresan
+mediante condicionales. No se anteponen caracteres artificiales a las entradas.
+
+Se admiten baterías enteras de 0 a 100, con hasta tres dígitos. Después de validar los dígitos, un contador empieza en cero y aumenta hasta alcanzar el valor ingresado: `008` se guarda como 8, sin usar `10#`. No se admiten modelos, usuarios o contraseñas vacíos o compuestos solo por
+espacios. Se rechazan comas porque el CSV simple no implementa
 campos entrecomillados. La disponibilidad admite Si/No en las variantes indicadas
 en el código y guarda siempre `Si` o `No`. Categorías y menús se eligen por número.
 Se supone una flota inicial válida como la provista; no se reparan archivos editados
 manualmente con columnas o identificadores inválidos.
+
+Los auxiliares de búsqueda y validación usan `return 0` para indicar éxito y
+`return 1` para indicar que no se encontró o no se aceptó el dato. Una llamada
+como `if buscar_usuario ...` decide según ese estado. `if ! ...` invierte la
+condición. Los `while true` de los menús y solicitudes repiten hasta que se
+alcanza un `return` o un `exit`, según corresponda. Se conservan como usos básicos
+de control acordados con Fede; no se atribuye al material un ejemplo idéntico.
+
+`local` mantiene separados los datos auxiliares durante la llamada. El patrón
+`[^[:space:]]` requiere al menos un carácter que no sea espacio en blanco. Ambos
+usos se conservan con autorización explícita. No se incorporan caracteres
+artificiales a las entradas ni una comprobación específica del retorno de carro.
+El valor `-n` no supera la validación de texto actual; no se agregó un caso especial.
 
 ## Ejemplo completo desde los datos iniciales
 
@@ -122,14 +135,21 @@ manualmente con columnas o identificadores inválidos.
   material es una base y permite investigar mecanismos adicionales. La transcripción
   dice 90 % al leer batería crítica; se usa el 20 % explícito del PDF y del script
   base, sin tratar ese pasaje transcrito como una modificación oficial.
-- `Parte 1/don_drones_manager_fix.sh` y `parte1a_problema1_Fede.md`: base corregida
+- `Material de clase/2. Sistema de archivos.pptx (3).pdf`, diapositivas 79-85,
+  87 y 89-100: salida con echo, funciones, condicionales, bucles, lectura y regex
+  con grep -E. Se adaptan estos mecanismos a menús, validaciones y correlativos.
+- `Transcripciones/Infra 08-18.txt`, líneas 1180-1185: rutas relativas para
+  conjuntos de archivos que se trasladan juntos. Aquí se requiere ejecutar desde
+  la carpeta que contiene el script y los CSV.
+- `Parte 1a/don_drones_manager.sh`: referencia provista para case, sustitución de
+  comandos, lectura CSV, cut y actualización con sed -i.
+- `Parte 1a/don_drones_manager_fix.sh` y `parte1a_problema1_Fede.md`: base corregida
   del equipo para el contador y la comparación. No se modifican desde la extensión.
 
 La distribución en funciones, el archivo de usuarios, el cálculo del mayor ID y
-la actualización por archivo temporal son decisiones de esta implementación,
-no soluciones atribuidas al docente. `help read`, `help printf`, `help local` y
-`help [[` permiten consultar la ayuda incorporada de Bash sobre las construcciones
-usadas. `mktemp` evita elegir un nombre temporal fijo.
+la actualización con sed -i son decisiones de esta implementación,
+no soluciones atribuidas al docente. `help read`, `help echo` y `help local` permiten consultar la ayuda incorporada de Bash sobre las construcciones
+usadas.
 
 ## Uso de IA y estado
 
@@ -138,3 +158,18 @@ documentar y verificar esta propuesta. La revisión y comprensión por los integ
 del equipo quedan pendientes; no se atribuye el contenido generado a una revisión
 humana ya realizada. Este Markdown es la fuente editable de la documentación; el
 PDF acompaña la propuesta para la entrega.
+
+## Estado de la documentación
+
+Esta explicación corresponde al código actual y está sincronizada con su PDF.
+La revisión de respaldo quedó cerrada considerando el material, el script original
+y las decisiones explícitas tomadas con Fede. Las combinaciones de mecanismos y
+la organización del programa son adaptaciones propias, no una solución docente
+textual. No quedan pendientes las sustituciones discutidas de dirname, mktemp,
+10#, printf ni los controles con break/continue de la categoría.
+
+Las comprobaciones realizadas en mi_ubuntu sobre copias temporales cubrieron
+sintaxis, registro y login, entradas inválidas, las cinco categorías, operaciones,
+reportes y persistencia. Se comprobaron también correlativos con ceros iniciales
+y cambios de cantidad de cifras, y los límites de asignación con batería 20 y 21.
+No se presenta esa verificación como una revisión humana del equipo.

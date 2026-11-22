@@ -6,65 +6,48 @@ procedure Torneo is
    Total_Canchas  : constant := 3;
    Unidad_Tiempo  : constant Duration := 1.0;
 
-   subtype Id_Cancha is Integer range 1 .. Total_Canchas;
-   -- Cero es la respuesta «no quedan partidos», no un encuentro adicional.
-   subtype Numero_Partido is Integer range 0 .. Total_Partidos;
-   subtype Id_Pareja is Integer range 1 .. 16;
-   subtype Segundos is Integer range 0 .. 4;
-   subtype Opcion_Ganador is Integer range 1 .. 2;
+   type Lista_Parejas is array (1 .. Total_Partidos) of Integer;
+   Parejas_A : Lista_Parejas;
+   Parejas_B : Lista_Parejas;
 
-   type Partido is record
-      Pareja_A : Id_Pareja;
-      Pareja_B : Id_Pareja;
-   end record;
-
-   Partidos : constant array (1 .. Total_Partidos) of Partido :=
-     ((1, 2), (3, 4), (5, 6), (7, 8),
-      (9, 10), (11, 12), (13, 14), (15, 16));
-
-   -- Instanciar adapta la plantilla estándar al rango que necesitamos sortear.
-   package Azar_Duracion is new Ada.Numerics.Discrete_Random (Segundos);
-   package Azar_Ganador is new Ada.Numerics.Discrete_Random (Opcion_Ganador);
+   -- Se sortean enteros; mod acota los valores usados por el torneo.
+   package Azar_Duracion is new Ada.Numerics.Discrete_Random (Integer);
+   package Azar_Ganador is new Ada.Numerics.Discrete_Random (Integer);
 
    -- La elección de valores queda separada de la coordinación del torneo.
    function Elegir_Duracion
-     (Generador : Azar_Duracion.Generator) return Segundos
+     (Generador : Azar_Duracion.Generator) return Integer
    is
    begin
-      return Azar_Duracion.Random (Generador);
+      return Azar_Duracion.Random (Generador) mod 5;
    end Elegir_Duracion;
 
    function Elegir_Ganador
-     (Encuentro : Partido;
-      Generador : Azar_Ganador.Generator) return Id_Pareja
+     (Pareja_A, Pareja_B : Integer;
+      Generador : Azar_Ganador.Generator) return Integer
    is
    begin
-      if Azar_Ganador.Random (Generador) = 1 then
-         return Encuentro.Pareja_A;
+      if Azar_Ganador.Random (Generador) mod 2 + 1 = 1 then
+         return Pareja_A;
       else
-         return Encuentro.Pareja_B;
+         return Pareja_B;
       end if;
    end Elegir_Ganador;
-begin
-   declare
-      -- El Coordinador es el único que modifica asignaciones y resultados.
+   procedure Ejecutar_Torneo is
+      -- El Coordinador asigna los partidos y recibe sus resultados.
       task Coordinador is
          entry Solicitar_Partido
-           (Cancha : Id_Cancha; Numero : out Numero_Partido);
+           (Cancha : Integer; Numero : out Integer);
          entry Informar_Resultado
-           (Cancha : Id_Cancha; Numero : Numero_Partido; Ganador : Id_Pareja);
+           (Cancha : Integer; Numero : Integer; Ganador : Integer);
       end Coordinador;
 
       -- Una misma definición sirve para tres tareas con identificadores distintos.
-      task type Cancha (Id : Id_Cancha);
+      task type Cancha (Id : Integer);
 
       task body Coordinador is
-         Proximo : Integer range 1 .. Total_Partidos + 1 := 1;
-         Terminados : Natural := 0;
+         Proximo : Integer := 1;
          Canchas_Cerradas : Natural := 0;
-         En_Juego : array (Id_Cancha) of Numero_Partido := (others => 0);
-         Cerrada : array (Id_Cancha) of Boolean := (others => False);
-         Ganadores : array (1 .. Total_Partidos) of Natural := (others => 0);
       begin
          -- Asignar el octavo no implica haber recibido su resultado. También
          -- debemos responder las solicitudes finales de las tres canchas.
@@ -73,60 +56,48 @@ begin
             -- Un accept fijo podría esperar pedidos mientras llegan resultados.
             select
                accept Solicitar_Partido
-                 (Cancha : Id_Cancha; Numero : out Numero_Partido)
+                 (Cancha : Integer; Numero : out Integer)
                do
                   -- La cancha que llama espera hasta terminar este accept.
-                  pragma Assert (En_Juego (Cancha) = 0 and not Cerrada (Cancha));
+
                   if Proximo <= Total_Partidos then
                      Numero := Proximo;
-                     En_Juego (Cancha) := Numero;
                      Proximo := Proximo + 1;
                      Put_Line
-                       ("Coordinador: Partido" & Numero_Partido'Image (Numero)
-                        & " asignado a Cancha" & Id_Cancha'Image (Cancha)
-                        & ". Pareja" & Id_Pareja'Image (Partidos (Numero).Pareja_A)
-                        & " vs Pareja" & Id_Pareja'Image (Partidos (Numero).Pareja_B)
+                       ("Coordinador: Partido" & Integer'Image (Numero)
+                        & " asignado a Cancha" & Integer'Image (Cancha)
+                        & ". Pareja" & Integer'Image (Parejas_A (Numero))
+                        & " vs Pareja" & Integer'Image (Parejas_B (Numero))
                         & ".");
                   else
                      Numero := 0;
-                     Cerrada (Cancha) := True;
                      Canchas_Cerradas := Canchas_Cerradas + 1;
                      Put_Line
                        ("Coordinador: sin partidos pendientes para Cancha"
-                        & Id_Cancha'Image (Cancha) & ".");
+                        & Integer'Image (Cancha) & ".");
                   end if;
                end Solicitar_Partido;
             or
                accept Informar_Resultado
-                 (Cancha : Id_Cancha; Numero : Numero_Partido; Ganador : Id_Pareja)
+                 (Cancha : Integer; Numero : Integer; Ganador : Integer)
                do
-                  -- Assert comprueba una condición; no bloquea ni sincroniza.
-                  pragma Assert (Numero /= 0 and then En_Juego (Cancha) = Numero);
-                  pragma Assert (Ganadores (Numero) = 0);
-                  pragma Assert
-                    (Ganador = Partidos (Numero).Pareja_A
-                     or else Ganador = Partidos (Numero).Pareja_B);
-                  Ganadores (Numero) := Ganador;
-                  En_Juego (Cancha) := 0;
-                  Terminados := Terminados + 1;
                   Put_Line
                     ("Coordinador recibió resultado de Cancha"
-                     & Id_Cancha'Image (Cancha) & ": Partido"
-                     & Numero_Partido'Image (Numero) & ", ganador Pareja"
-                     & Id_Pareja'Image (Ganador) & ".");
+                     & Integer'Image (Cancha) & ": Partido"
+                     & Integer'Image (Numero) & ", ganador Pareja"
+                     & Integer'Image (Ganador) & ".");
                end Informar_Resultado;
             end select;
          end loop;
          -- Cada cancha informa antes de volver a pedir. Cuando todas recibieron
          -- fin, ya no queda ningún partido en juego ni una futura llamada.
-         pragma Assert (Terminados = Total_Partidos);
          Put_Line ("Todos los partidos han finalizado.");
       end Coordinador;
 
       task body Cancha is
-         Numero : Numero_Partido;
-         Duracion : Segundos;
-         Ganador : Id_Pareja;
+         Numero : Integer;
+         Duracion : Integer;
+         Ganador : Integer;
          Generador_Duracion : Azar_Duracion.Generator;
          Generador_Ganador : Azar_Ganador.Generator;
       begin
@@ -135,27 +106,27 @@ begin
          Azar_Duracion.Reset (Generador_Duracion);
          Azar_Ganador.Reset (Generador_Ganador);
          loop
-            Put_Line ("Cancha" & Id_Cancha'Image (Id) & " solicita un partido.");
+            Put_Line ("Cancha" & Integer'Image (Id) & " solicita un partido.");
             -- La llamada espera al accept. Numero es out: vuelve con la respuesta.
             Coordinador.Solicitar_Partido (Id, Numero);
             exit when Numero = 0;
 
             Duracion := Elegir_Duracion (Generador_Duracion);
             Put_Line
-              ("Cancha" & Id_Cancha'Image (Id) & " disputa Partido"
-               & Numero_Partido'Image (Numero) & " durante"
-               & Segundos'Image (Duracion) & " segundos.");
+              ("Cancha" & Integer'Image (Id) & " disputa Partido"
+               & Integer'Image (Numero) & " durante"
+               & Integer'Image (Duracion) & " segundos.");
             -- Fuera del accept: el Coordinador y otras canchas siguen trabajando.
             delay Duration (Duracion) * Unidad_Tiempo;
-            Ganador := Elegir_Ganador (Partidos (Numero), Generador_Ganador);
+            Ganador := Elegir_Ganador (Parejas_A (Numero), Parejas_B (Numero), Generador_Ganador);
             Put_Line
-              ("Cancha" & Id_Cancha'Image (Id) & " finalizó Partido"
-               & Numero_Partido'Image (Numero) & ". Ganador: Pareja"
-               & Id_Pareja'Image (Ganador) & ".");
+              ("Cancha" & Integer'Image (Id) & " finalizó Partido"
+               & Integer'Image (Numero) & ". Ganador: Pareja"
+               & Integer'Image (Ganador) & ".");
             -- Espera la recepción del resultado antes de solicitar otro partido.
             Coordinador.Informar_Resultado (Id, Numero, Ganador);
          end loop;
-         Put_Line ("Cancha" & Id_Cancha'Image (Id) & " termina su ejecución.");
+         Put_Line ("Cancha" & Integer'Image (Id) & " termina su ejecución.");
       end Cancha;
 
       Cancha_1 : Cancha (1);
@@ -163,8 +134,15 @@ begin
       Cancha_3 : Cancha (3);
    begin
       -- Las tareas se activan automáticamente. Ada espera a que terminen todas
-      -- antes de abandonar este bloque, aunque aquí solo aparezca null.
+      -- antes de retornar del procedimiento, aunque aquí solo aparezca null.
       null;
-   end;
+   end Ejecutar_Torneo;
+begin
+   -- Se definen las parejas antes de llamar al procedimiento que activa las tareas.
+   for I in 1 .. Total_Partidos loop
+      Parejas_A (I) := 2 * I - 1;
+      Parejas_B (I) := 2 * I;
+   end loop;
+   Ejecutar_Torneo;
    Put_Line ("Torneo terminado.");
 end Torneo;

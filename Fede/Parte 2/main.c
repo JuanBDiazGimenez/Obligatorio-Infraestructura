@@ -1,11 +1,9 @@
-#define _POSIX_C_SOURCE 200809L
-#include <errno.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
+#include <unistd.h>
 
 #define RECEPTORES 4
 #define ESCANERES 4
@@ -15,20 +13,6 @@
 #define CAPACIDAD_ZONA 15
 #define CAPACIDAD_PRIORIDAD 10
 #define CAPACIDAD_NORMAL 15
-
-/* Las pruebas pueden reducir la unidad; la ejecución normal usa segundos. */
-#ifndef UNIDAD_MS
-#define UNIDAD_MS 1000
-#endif
-#ifndef SEMILLA
-#define SEMILLA ((unsigned int)time(NULL))
-#endif
-
-#ifdef TRAZAS
-#define TRAZA(...) printf(__VA_ARGS__)
-#else
-#define TRAZA(...) ((void)0)
-#endif
 
 typedef struct {
     int id;
@@ -56,83 +40,72 @@ typedef struct {
 
 typedef struct {
     int id;
-    unsigned int semilla;
 } Trabajador;
 
-static Zona zona1, zona2;
-static Cola prioridad, normal;
-static sem_t espacios_prioridad, espacios_normal, disponibles_finales;
-static sem_t mutex_finales, mutex_recepcion, mutex_despachados;
-static int finales_cerradas;
-static int prioritarios_consecutivos;
-static int asignados;
-static int despachados;
+Zona zona1, zona2;
+Cola prioridad, normal;
+sem_t espacios_prioridad, espacios_normal, disponibles_finales;
+sem_t mutex_finales, mutex_recepcion, mutex_despachados;
+int finales_cerradas;
+int prioritarios_consecutivos;
+int asignados;
+int despachados;
 
-static void fallar(const char *operacion) {
-    perror(operacion);
-    exit(EXIT_FAILURE);
+void esperar(sem_t *semaforo) {
+    sem_wait(semaforo);
 }
 
-static void esperar(sem_t *semaforo) {
-    while (sem_wait(semaforo) == -1) {
-        if (errno != EINTR) fallar("sem_wait");
-    }
+void avisar(sem_t *semaforo) {
+    sem_post(semaforo);
 }
 
-static void avisar(sem_t *semaforo) {
-    if (sem_post(semaforo) == -1) fallar("sem_post");
+void iniciar_semaforo(sem_t *semaforo, unsigned int valor) {
+    sem_init(semaforo, 0, valor);
 }
 
-static void iniciar_semaforo(sem_t *semaforo, unsigned int valor) {
-    if (sem_init(semaforo, 0, valor) == -1) fallar("sem_init");
+void destruir_semaforo(sem_t *semaforo) {
+    sem_destroy(semaforo);
 }
 
-static void destruir_semaforo(sem_t *semaforo) {
-    if (sem_destroy(semaforo) == -1) fallar("sem_destroy");
+int aleatorio(int minimo, int maximo) {
+    return minimo + rand() % (maximo - minimo + 1);
 }
 
-static int aleatorio(Trabajador *trabajador, int minimo, int maximo) {
-    return minimo + (int)(rand_r(&trabajador->semilla) %
-                         (unsigned int)(maximo - minimo + 1));
+void demorar(int minimo, int maximo) {
+    unsigned int segundos = aleatorio(minimo, maximo);
+    sleep(segundos);
 }
 
-static void demorar(Trabajador *trabajador, int minimo, int maximo) {
-    int milisegundos = aleatorio(trabajador, minimo, maximo) * UNIDAD_MS;
-    struct timespec tiempo = {milisegundos / 1000,
-                              (milisegundos % 1000) * 1000000L};
-    while (nanosleep(&tiempo, &tiempo) == -1) {
-        if (errno != EINTR) fallar("nanosleep");
-    }
-}
-
-static void iniciar_cola(Cola *cola, int capacidad, const char *nombre) {
-    *cola = (Cola){.capacidad = capacidad, .nombre = nombre};
+void iniciar_cola(Cola *cola, int capacidad, const char *nombre) {
+    cola->capacidad = capacidad;
+    cola->nombre = nombre;
+    cola->entrada = 0;
+    cola->salida = 0;
+    cola->cantidad = 0;
 }
 
 /* Estas dos operaciones se llaman con espacio/elemento reservado y exclusión. */
-static void insertar(Cola *cola, Paquete paquete) {
+void insertar(Cola *cola, Paquete paquete) {
     cola->datos[cola->entrada] = paquete;
     cola->entrada = (cola->entrada + 1) % cola->capacidad;
     cola->cantidad++;
-    TRAZA("TRAZA ENTRA %s %d %d\n", cola->nombre, paquete.id, cola->cantidad);
 }
 
-static Paquete extraer(Cola *cola) {
+Paquete extraer(Cola *cola) {
     Paquete paquete = cola->datos[cola->salida];
     cola->salida = (cola->salida + 1) % cola->capacidad;
     cola->cantidad--;
-    TRAZA("TRAZA SALE %s %d %d\n", cola->nombre, paquete.id, cola->cantidad);
     return paquete;
 }
 
-static void iniciar_zona(Zona *zona, const char *nombre) {
+void iniciar_zona(Zona *zona, const char *nombre) {
     iniciar_cola(&zona->cola, CAPACIDAD_ZONA, nombre);
     iniciar_semaforo(&zona->espacios, CAPACIDAD_ZONA);
     iniciar_semaforo(&zona->elementos, 0);
     iniciar_semaforo(&zona->mutex, 1);
 }
 
-static void depositar(Zona *zona, Paquete paquete) {
+void depositar(Zona *zona, Paquete paquete) {
     esperar(&zona->espacios);
     esperar(&zona->mutex);
     insertar(&zona->cola, paquete);
@@ -140,7 +113,7 @@ static void depositar(Zona *zona, Paquete paquete) {
     avisar(&zona->mutex);
 }
 
-static int retirar(Zona *zona, Paquete *paquete) {
+int retirar(Zona *zona, Paquete *paquete) {
     esperar(&zona->elementos);
     esperar(&zona->mutex);
     if (zona->cerrada && zona->cola.cantidad == 0) {
@@ -154,20 +127,20 @@ static int retirar(Zona *zona, Paquete *paquete) {
 }
 
 /* main cierra una zona solo después del join de TODOS sus productores. */
-static void cerrar_zona(Zona *zona, int consumidores) {
+void cerrar_zona(Zona *zona, int consumidores) {
     esperar(&zona->mutex);
     zona->cerrada = 1;
     avisar(&zona->mutex);
     for (int i = 0; i < consumidores; i++) avisar(&zona->elementos);
 }
 
-static void destruir_zona(Zona *zona) {
+void destruir_zona(Zona *zona) {
     destruir_semaforo(&zona->espacios);
     destruir_semaforo(&zona->elementos);
     destruir_semaforo(&zona->mutex);
 }
 
-static void *receptor(void *argumento) {
+void *receptor(void *argumento) {
     Trabajador *trabajador = argumento;
     while (1) {
         esperar(&mutex_recepcion);
@@ -178,19 +151,23 @@ static void *receptor(void *argumento) {
         int id = ++asignados;
         avisar(&mutex_recepcion);
 
-        demorar(trabajador, 1, 2);
-        Paquete paquete = {.id = id, .peso = aleatorio(trabajador, 1, 20)};
+        demorar(1, 2);
+        Paquete paquete;
+        paquete.id = id;
+        paquete.peso = aleatorio(1, 20);
+        paquete.prioridad = 0;
+        paquete.costo = 0;
         printf("Receptor %d generó paquete %d con peso %d\n",
                trabajador->id, paquete.id, paquete.peso);
         depositar(&zona1, paquete);
     }
 }
 
-static void *escaner(void *argumento) {
+void *escaner(void *argumento) {
     Trabajador *trabajador = argumento;
     Paquete paquete;
     while (retirar(&zona1, &paquete)) {
-        demorar(trabajador, 0, 3);
+        demorar(0, 3);
         paquete.prioridad = paquete.peso > 10;
         paquete.costo = paquete.peso * 100;
         printf("Escáner %d procesó paquete %d\n", trabajador->id, paquete.id);
@@ -199,11 +176,11 @@ static void *escaner(void *argumento) {
     return NULL;
 }
 
-static void *clasificador(void *argumento) {
+void *clasificador(void *argumento) {
     Trabajador *trabajador = argumento;
     Paquete paquete;
     while (retirar(&zona2, &paquete)) {
-        demorar(trabajador, 0, 2);
+        demorar(0, 2);
         Cola *destino = paquete.prioridad ? &prioridad : &normal;
         sem_t *espacios = paquete.prioridad ? &espacios_prioridad : &espacios_normal;
         esperar(espacios);
@@ -217,7 +194,7 @@ static void *clasificador(void *argumento) {
     return NULL;
 }
 
-static int retirar_para_despacho(Paquete *paquete) {
+int retirar_para_despacho(Paquete *paquete) {
     esperar(&disponibles_finales);
     esperar(&mutex_finales);
     if (finales_cerradas && prioridad.cantidad == 0 && normal.cantidad == 0) {
@@ -229,8 +206,6 @@ static int retirar_para_despacho(Paquete *paquete) {
     int elegir_prioridad = prioridad.cantidad > 0 &&
                           (normal.cantidad == 0 || prioritarios_consecutivos < 3);
     Cola *origen = elegir_prioridad ? &prioridad : &normal;
-    TRAZA("TRAZA ELEGIR %s %d %d %d\n", origen->nombre,
-          prioridad.cantidad, normal.cantidad, prioritarios_consecutivos);
     *paquete = extraer(origen);
     if (elegir_prioridad) {
         if (prioritarios_consecutivos < 3) prioritarios_consecutivos++;
@@ -242,11 +217,11 @@ static int retirar_para_despacho(Paquete *paquete) {
     return 1;
 }
 
-static void *despachador(void *argumento) {
+void *despachador(void *argumento) {
     Trabajador *trabajador = argumento;
     Paquete paquete;
     while (retirar_para_despacho(&paquete)) {
-        demorar(trabajador, 0, 2);
+        demorar(0, 2);
         esperar(&mutex_despachados);
         despachados++;
         printf("Despachador %d despachó paquete %d - peso %d - prioridad %s - costo %d\n",
@@ -257,25 +232,9 @@ static void *despachador(void *argumento) {
     return NULL;
 }
 
-static void crear_grupo(pthread_t *hilos, Trabajador *datos, int cantidad,
-                        void *(*funcion)(void *), unsigned int semilla) {
+void esperar_grupo(pthread_t *hilos, int cantidad) {
     for (int i = 0; i < cantidad; i++) {
-        datos[i] = (Trabajador){.id = i + 1, .semilla = semilla + (unsigned int)i};
-        int error = pthread_create(&hilos[i], NULL, funcion, &datos[i]);
-        if (error != 0) {
-            fprintf(stderr, "pthread_create: %s\n", strerror(error));
-            exit(EXIT_FAILURE);
-        }
-    }
-}
-
-static void esperar_grupo(pthread_t *hilos, int cantidad) {
-    for (int i = 0; i < cantidad; i++) {
-        int error = pthread_join(hilos[i], NULL);
-        if (error != 0) {
-            fprintf(stderr, "pthread_join: %s\n", strerror(error));
-            exit(EXIT_FAILURE);
-        }
+        pthread_join(hilos[i], NULL);
     }
 }
 
@@ -284,8 +243,7 @@ int main(void) {
     pthread_t clasificadores[CLASIFICADORES], despachadores[DESPACHADORES];
     Trabajador datos_receptores[RECEPTORES], datos_escaneres[ESCANERES];
     Trabajador datos_clasificadores[CLASIFICADORES], datos_despachadores[DESPACHADORES];
-    unsigned int semilla = SEMILLA;
-    setvbuf(stdout, NULL, _IOLBF, 0);
+    srand(time(NULL));
 
     iniciar_zona(&zona1, "ZONA1");
     iniciar_zona(&zona2, "ZONA2");
@@ -298,10 +256,25 @@ int main(void) {
     iniciar_semaforo(&mutex_recepcion, 1);
     iniciar_semaforo(&mutex_despachados, 1);
 
-    crear_grupo(despachadores, datos_despachadores, DESPACHADORES, despachador, semilla + 300);
-    crear_grupo(clasificadores, datos_clasificadores, CLASIFICADORES, clasificador, semilla + 200);
-    crear_grupo(escaneres, datos_escaneres, ESCANERES, escaner, semilla + 100);
-    crear_grupo(receptores, datos_receptores, RECEPTORES, receptor, semilla);
+    for (int i = 0; i < DESPACHADORES; i++) {
+        datos_despachadores[i].id = i + 1;
+        pthread_create(&despachadores[i], NULL, despachador, &datos_despachadores[i]);
+    }
+
+    for (int i = 0; i < CLASIFICADORES; i++) {
+        datos_clasificadores[i].id = i + 1;
+        pthread_create(&clasificadores[i], NULL, clasificador, &datos_clasificadores[i]);
+    }
+
+    for (int i = 0; i < ESCANERES; i++) {
+        datos_escaneres[i].id = i + 1;
+        pthread_create(&escaneres[i], NULL, escaner, &datos_escaneres[i]);
+    }
+
+    for (int i = 0; i < RECEPTORES; i++) {
+        datos_receptores[i].id = i + 1;
+        pthread_create(&receptores[i], NULL, receptor, &datos_receptores[i]);
+    }
 
     esperar_grupo(receptores, RECEPTORES);
     cerrar_zona(&zona1, ESCANERES);
@@ -323,5 +296,5 @@ int main(void) {
     destruir_semaforo(&mutex_recepcion);
     destruir_semaforo(&mutex_despachados);
     printf("Finalizado: %d paquetes generados y %d despachados.\n", asignados, despachados);
-    return despachados == TOTAL_PAQUETES ? EXIT_SUCCESS : EXIT_FAILURE;
+    return 0;
 }

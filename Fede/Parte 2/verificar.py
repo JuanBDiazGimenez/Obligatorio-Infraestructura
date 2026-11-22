@@ -1,8 +1,9 @@
 """Verificacion local: requiere Linux, GCC y Python 3; no instala dependencias.
 
-python3 verificar.py          # distintas semillas, tiempos reducidos
+python3 verificar.py          # distintas semillas, sin demoras
 python3 verificar.py --real   # ademas ejecuta los tiempos de la letra
-La simulacion implementada en main.c no necesita Python.
+Las semillas, las trazas y la omision de demoras se aplican solo a copias
+temporales. main.c no tiene opciones de prueba y no necesita Python.
 """
 from collections import Counter, deque
 from pathlib import Path
@@ -99,25 +100,41 @@ def ejecutar(orden, limite=30):
     return resultado.stdout
 
 
+def preparar_copia(origen, destino, semilla=None, trazas=False, sin_demoras=False):
+    texto = origen.read_text(encoding="utf-8")
+    if semilla is not None:
+        texto = texto.replace("srand(time(NULL));", f"srand({semilla});")
+    if sin_demoras:
+        texto = texto.replace("sleep(segundos);", "sleep(0 * segundos);")
+    if trazas:
+        texto = texto.replace('    cola->cantidad++;', '    cola->cantidad++;\n    printf("TRAZA ENTRA %s %d %d\\n", cola->nombre, paquete.id, cola->cantidad);')
+        texto = texto.replace('    cola->cantidad--;', '    cola->cantidad--;\n    printf("TRAZA SALE %s %d %d\\n", cola->nombre, paquete.id, cola->cantidad);')
+        texto = texto.replace('    *paquete = extraer(origen);', '    printf("TRAZA ELEGIR %s %d %d %d\\n", origen->nombre, prioridad.cantidad, normal.cantidad, prioritarios_consecutivos);\n    *paquete = extraer(origen);')
+    destino.write_text(texto, encoding="utf-8")
+
+
 def main():
     origen = Path(__file__).resolve().with_name("main.c")
     with tempfile.TemporaryDirectory(prefix="springfield-") as temporal:
+        copia = Path(temporal) / "main.c"
         binario = str(Path(temporal) / "springfield")
         base = ["gcc", "-std=c11", "-Wall", "-Wextra", "-Wpedantic", "-Werror", "-pthread"]
         ejecutar(base + [str(origen.with_name("pruebas_prioridad.c")), "-o", binario])
         print(ejecutar([binario]).strip(), flush=True)
         for semilla in range(1, 13):
-            ejecutar(base + ["-DTRAZAS", "-DUNIDAD_MS=1", f"-DSEMILLA={semilla}", str(origen), "-o", binario])
+            preparar_copia(origen, copia, semilla, trazas=True, sin_demoras=True)
+            ejecutar(base + [str(copia), "-o", binario])
             maximos, forzados = comprobar(ejecutar([binario]))
             print(f"Semilla {semilla}: 300 por etapa, FIFO/capacidades/prioridad correctos; máximos={maximos}, turnos normales forzados={forzados}", flush=True)
-        ejecutar(base + ["-g", "-fsanitize=address,undefined", "-fno-omit-frame-pointer", "-DTRAZAS", "-DUNIDAD_MS=1", "-DSEMILLA=100", str(origen), "-o", binario])
+        preparar_copia(origen, copia, 100, trazas=True, sin_demoras=True)
+        ejecutar(base + ["-g", "-fsanitize=address,undefined", "-fno-omit-frame-pointer", str(copia), "-o", binario])
         comprobar(ejecutar([binario]))
         print("AddressSanitizer y UndefinedBehaviorSanitizer: ejecución correcta.", flush=True)
-        # Compilar también la versión normal, sin trazas ni reducción de tiempos.
         ejecutar(base + [str(origen), "-o", binario])
         print("Versión normal: compila sin advertencias.", flush=True)
         if "--real" in sys.argv:
-            ejecutar(base + ["-DTRAZAS", str(origen), "-o", binario])
+            preparar_copia(origen, copia, trazas=True)
+            ejecutar(base + [str(copia), "-o", binario])
             maximos, forzados = comprobar(ejecutar([binario], limite=600))
             print(f"Tiempos reales: correcto; máximos={maximos}, turnos normales forzados={forzados}", flush=True)
 
