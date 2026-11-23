@@ -1,0 +1,158 @@
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Nuevo usuario: Error: el usuario ya existe.
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Nuevo usuario: Error: el usuario no puede estar vacio ni contener ':'.
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Nuevo usuario: Contrasena: 
+Error: la contrasena no puede estar en blanco.
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Nuevo usuario: Contrasena: 
+Usuario noe registrado. Ahora puede iniciar sesion.
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Usuario: Contrasena: 
+Error: usuario o contrasena incorrectos.
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Usuario: Contrasena: 
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: Categorias:
+  1) Scout
+  2) Cargo
+  3) Heavy
+  4) Cooler
+  5) Racer
+Categoria (1-5): Modelo: Bateria (0-100): Error: ingrese un numero entero entre 0 y 100.
+Bateria (0-100): Error: ingrese un numero entero entre 0 y 100.
+Bateria (0-100): Disponible (Si/No): Error: responda Si o No.
+Disponible (Si/No): CAR-006 - Cargo - SkyHauler X3 - 8% - Disponible
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: Categorias:
+  1) Scout
+  2) Cargo
+  3) Heavy
+  4) Cooler
+  5) Racer
+Categoria (1-5): Error: elija un numero entre 1 y 5.
+Categoria (1-5): Modelo: Bateria (0-100): Disponible (Si/No): SCO-004 - Scout - Hawk One - 60% - No disponible
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: ID del dron: Error: Bateria insuficiente.
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: ID del dron: Dron CAR-001 asignado exitosamente.
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: ID del dron: Error: el dron CAR-001 no esta disponible.
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: ID del dron: Error: el dron ZZZ-9 no existe.
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: ID del dron: Bateria (0-100): Disponible (Si/No): Dron CAR-006 actualizado.
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: ID del dron: Dron CAR-006 asignado exitosamente.
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: Drones con bateria critica: 7
+SCO-002 - Scout - FalconEye Mini - 15% - Disponible
+CAR-003 - Cargo - SkyHauler X1 - 8% - Disponible
+HEA-002 - Heavy - TitanLift 20 - 19% - Disponible
+COO-002 - Cooler - FreshWing R1 - 12% - Disponible
+RAC-002 - Racer - BoltStrike V3 - 5% - Disponible
+HEA-004 - Heavy - TitanLift Pro - 3% - Disponible
+RAC-004 - Racer - BoltStrike V3 - 18% - Disponible
+
+=== Don Drones - Menu principal (usuario: noe) ===
+1) Ingresar dron
+2) Asignar dron a reparto
+3) Actualizar dron
+4) Reporte de estado de flota
+5) Log Out
+6) Salir
+Opcion: Sesion cerrada.
+
+=== Don Drones - Sesion ===
+1) Sign Up
+2) Log In
+3) Salir
+Opcion: Hasta luego.
