@@ -1,0 +1,61 @@
+Cancha 3 solicita un partido.
+Coordinador:
+Partido 1 asignado a Cancha 3.
+Pareja 1 vs Pareja 2.
+Cancha 3 está disputando el partido 1...
+Cancha 1 solicita un partido.
+Coordinador:
+Partido 2 asignado a Cancha 1.
+Pareja 3 vs Pareja 4.
+Cancha 2 solicita un partido.
+Coordinador:
+Partido 3 asignado a Cancha 2.
+Pareja 5 vs Pareja 6.
+Cancha 2 está disputando el partido 3...
+Cancha 1 está disputando el partido 2...
+Cancha 3 finalizó el partido 1. Ganador: Pareja 1.
+Coordinador recibió el resultado de Cancha 3 (ganó Pareja 1).
+Cancha 3 solicita un partido.
+Coordinador:
+Partido 4 asignado a Cancha 3.
+Pareja 7 vs Pareja 8.
+Cancha 3 está disputando el partido 4...
+Cancha 1 finalizó el partido 2. Ganador: Pareja 4.
+Coordinador recibió el resultado de Cancha 1 (ganó Pareja 4).
+Cancha 1 solicita un partido.
+Coordinador:
+Partido 5 asignado a Cancha 1.
+Pareja 9 vs Pareja 10.
+Cancha 1 está disputando el partido 5...
+Cancha 2 finalizó el partido 3. Ganador: Pareja 5.
+Coordinador recibió el resultado de Cancha 2 (ganó Pareja 5).
+Cancha 2 solicita un partido.
+Coordinador:
+Partido 6 asignado a Cancha 2.
+Pareja 11 vs Pareja 12.
+Cancha 2 está disputando el partido 6...
+Cancha 1 finalizó el partido 5. Ganador: Pareja 10.
+Coordinador recibió el resultado de Cancha 1 (ganó Pareja 10).
+Cancha 1 solicita un partido.
+Coordinador:
+Partido 7 asignado a Cancha 1.
+Pareja 13 vs Pareja 14.
+Cancha 1 está disputando el partido 7...
+Cancha 1 finalizó el partido 7. Ganador: Pareja 13.
+Coordinador recibió el resultado de Cancha 1 (ganó Pareja 13).
+Cancha 1 solicita un partido.
+Coordinador:
+Partido 8 asignado a Cancha 1.
+Pareja 15 vs Pareja 16.
+Cancha 1 está disputando el partido 8...
+Cancha 3 finalizó el partido 4. Ganador: Pareja 7.
+Coordinador recibió el resultado de Cancha 3 (ganó Pareja 7).
+Cancha 3 solicita un partido.
+Cancha 1 finalizó el partido 8. Ganador: Pareja 15.
+Coordinador recibió el resultado de Cancha 1 (ganó Pareja 15).
+Cancha 1 solicita un partido.
+Cancha 2 finalizó el partido 6. Ganador: Pareja 11.
+Coordinador recibió el resultado de Cancha 2 (ganó Pareja 11).
+Cancha 2 solicita un partido.
+Todos los partidos han finalizado.
+Torneo terminado.

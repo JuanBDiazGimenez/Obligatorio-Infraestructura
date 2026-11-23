@@ -1,0 +1,1201 @@
+Receptor 4 generó paquete 4 con peso 20
+Receptor 1 generó paquete 1 con peso 4
+Receptor 3 generó paquete 3 con peso 5
+Escáner 3 procesó paquete 3
+Receptor 2 generó paquete 2 con peso 12
+Receptor 4 generó paquete 5 con peso 13
+Escáner 1 procesó paquete 4
+Clasificador 2 envió paquete 4 a cola PRIORIDAD
+Receptor 1 generó paquete 6 con peso 18
+Clasificador 1 envió paquete 3 a cola NORMAL
+Despachador 1 despachó paquete 4 - peso 20 - prioridad ALTA - costo 2000
+Receptor 2 generó paquete 8 con peso 18
+Receptor 3 generó paquete 7 con peso 2
+Despachador 2 despachó paquete 3 - peso 5 - prioridad NORMAL - costo 500
+Escáner 2 procesó paquete 1
+Receptor 1 generó paquete 10 con peso 6
+Receptor 4 generó paquete 9 con peso 20
+Escáner 2 procesó paquete 8
+Escáner 4 procesó paquete 2
+Clasificador 2 envió paquete 2 a cola PRIORIDAD
+Receptor 2 generó paquete 11 con peso 14
+Despachador 3 despachó paquete 2 - peso 12 - prioridad ALTA - costo 1200
+Receptor 3 generó paquete 12 con peso 19
+Escáner 2 procesó paquete 7
+Receptor 1 generó paquete 13 con peso 4
+Escáner 3 procesó paquete 5
+Clasificador 3 envió paquete 1 a cola NORMAL
+Clasificador 4 envió paquete 8 a cola PRIORIDAD
+Escáner 1 procesó paquete 6
+Receptor 4 generó paquete 14 con peso 12
+Despachador 2 despachó paquete 8 - peso 18 - prioridad ALTA - costo 1800
+Receptor 2 generó paquete 15 con peso 19
+Receptor 3 generó paquete 16 con peso 1
+Clasificador 2 envió paquete 5 a cola PRIORIDAD
+Receptor 1 generó paquete 17 con peso 1
+Despachador 3 despachó paquete 5 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 3 envió paquete 6 a cola PRIORIDAD
+Clasificador 1 envió paquete 7 a cola NORMAL
+Escáner 4 procesó paquete 10
+Escáner 3 procesó paquete 11
+Receptor 4 generó paquete 18 con peso 5
+Clasificador 2 envió paquete 11 a cola PRIORIDAD
+Despachador 1 despachó paquete 1 - peso 4 - prioridad NORMAL - costo 400
+Receptor 3 generó paquete 20 con peso 4
+Escáner 2 procesó paquete 9
+Clasificador 4 envió paquete 10 a cola NORMAL
+Receptor 2 generó paquete 19 con peso 1
+Receptor 1 generó paquete 21 con peso 3
+Escáner 1 procesó paquete 12
+Clasificador 3 envió paquete 9 a cola PRIORIDAD
+Despachador 3 despachó paquete 6 - peso 18 - prioridad ALTA - costo 1800
+Clasificador 1 envió paquete 12 a cola PRIORIDAD
+Despachador 2 despachó paquete 11 - peso 14 - prioridad ALTA - costo 1400
+Receptor 4 generó paquete 22 con peso 14
+Despachador 2 despachó paquete 9 - peso 20 - prioridad ALTA - costo 2000
+Escáner 4 procesó paquete 13
+Clasificador 2 envió paquete 13 a cola NORMAL
+Receptor 3 generó paquete 23 con peso 9
+Receptor 2 generó paquete 24 con peso 18
+Despachador 1 despachó paquete 7 - peso 2 - prioridad NORMAL - costo 200
+Despachador 3 despachó paquete 12 - peso 19 - prioridad ALTA - costo 1900
+Escáner 2 procesó paquete 15
+Receptor 1 generó paquete 25 con peso 19
+Despachador 2 despachó paquete 10 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 4 envió paquete 15 a cola PRIORIDAD
+Escáner 3 procesó paquete 14
+Clasificador 3 envió paquete 14 a cola PRIORIDAD
+Despachador 1 despachó paquete 15 - peso 19 - prioridad ALTA - costo 1900
+Despachador 3 despachó paquete 14 - peso 12 - prioridad ALTA - costo 1200
+Escáner 1 procesó paquete 16
+Receptor 4 generó paquete 26 con peso 10
+Escáner 4 procesó paquete 17
+Receptor 3 generó paquete 27 con peso 5
+Receptor 1 generó paquete 29 con peso 19
+Clasificador 1 envió paquete 16 a cola NORMAL
+Receptor 2 generó paquete 28 con peso 19
+Clasificador 2 envió paquete 17 a cola NORMAL
+Escáner 4 procesó paquete 21
+Despachador 2 despachó paquete 13 - peso 4 - prioridad NORMAL - costo 400
+Escáner 2 procesó paquete 18
+Receptor 4 generó paquete 30 con peso 1
+Escáner 1 procesó paquete 19
+Receptor 3 generó paquete 31 con peso 3
+Receptor 1 generó paquete 32 con peso 6
+Escáner 3 procesó paquete 20
+Escáner 1 procesó paquete 24
+Despachador 3 despachó paquete 16 - peso 1 - prioridad NORMAL - costo 100
+Clasificador 3 envió paquete 18 a cola NORMAL
+Receptor 2 generó paquete 33 con peso 4
+Receptor 4 generó paquete 34 con peso 3
+Escáner 4 procesó paquete 22
+Clasificador 4 envió paquete 21 a cola NORMAL
+Receptor 3 generó paquete 35 con peso 3
+Despachador 1 despachó paquete 17 - peso 1 - prioridad NORMAL - costo 100
+Receptor 1 generó paquete 36 con peso 6
+Escáner 3 procesó paquete 25
+Escáner 1 procesó paquete 26
+Clasificador 1 envió paquete 19 a cola NORMAL
+Clasificador 2 envió paquete 20 a cola NORMAL
+Clasificador 1 envió paquete 25 a cola PRIORIDAD
+Despachador 3 despachó paquete 25 - peso 19 - prioridad ALTA - costo 1900
+Escáner 3 procesó paquete 29
+Receptor 2 generó paquete 37 con peso 6
+Receptor 4 generó paquete 38 con peso 19
+Clasificador 2 envió paquete 26 a cola NORMAL
+Clasificador 4 envió paquete 22 a cola PRIORIDAD
+Escáner 1 procesó paquete 28
+Escáner 2 procesó paquete 23
+Receptor 3 generó paquete 39 con peso 10
+Clasificador 3 envió paquete 24 a cola PRIORIDAD
+Escáner 3 procesó paquete 30
+Despachador 2 despachó paquete 22 - peso 14 - prioridad ALTA - costo 1400
+Clasificador 3 envió paquete 30 a cola NORMAL
+Despachador 3 despachó paquete 24 - peso 18 - prioridad ALTA - costo 1800
+Receptor 1 generó paquete 40 con peso 9
+Receptor 4 generó paquete 42 con peso 12
+Escáner 4 procesó paquete 27
+Despachador 1 despachó paquete 18 - peso 5 - prioridad NORMAL - costo 500
+Clasificador 1 envió paquete 29 a cola PRIORIDAD
+Receptor 2 generó paquete 41 con peso 1
+Escáner 3 procesó paquete 33
+Clasificador 2 envió paquete 28 a cola PRIORIDAD
+Receptor 3 generó paquete 43 con peso 14
+Despachador 3 despachó paquete 29 - peso 19 - prioridad ALTA - costo 1900
+Despachador 2 despachó paquete 28 - peso 19 - prioridad ALTA - costo 1900
+Clasificador 4 envió paquete 23 a cola NORMAL
+Despachador 1 despachó paquete 21 - peso 3 - prioridad NORMAL - costo 300
+Escáner 2 procesó paquete 32
+Escáner 1 procesó paquete 31
+Receptor 1 generó paquete 44 con peso 19
+Clasificador 3 envió paquete 27 a cola NORMAL
+Clasificador 2 envió paquete 32 a cola NORMAL
+Escáner 1 procesó paquete 37
+Receptor 3 generó paquete 47 con peso 3
+Receptor 4 generó paquete 45 con peso 8
+Escáner 4 procesó paquete 34
+Receptor 2 generó paquete 46 con peso 12
+Clasificador 1 envió paquete 33 a cola NORMAL
+Clasificador 2 envió paquete 34 a cola NORMAL
+Despachador 2 despachó paquete 19 - peso 1 - prioridad NORMAL - costo 100
+Clasificador 4 envió paquete 31 a cola NORMAL
+Despachador 3 despachó paquete 20 - peso 4 - prioridad NORMAL - costo 400
+Despachador 1 despachó paquete 26 - peso 10 - prioridad NORMAL - costo 1000
+Escáner 2 procesó paquete 36
+Escáner 2 procesó paquete 40
+Despachador 2 despachó paquete 30 - peso 1 - prioridad NORMAL - costo 100
+Clasificador 3 envió paquete 37 a cola NORMAL
+Despachador 3 despachó paquete 23 - peso 9 - prioridad NORMAL - costo 900
+Clasificador 2 envió paquete 40 a cola NORMAL
+Escáner 3 procesó paquete 35
+Escáner 4 procesó paquete 39
+Receptor 1 generó paquete 48 con peso 17
+Receptor 4 generó paquete 50 con peso 15
+Receptor 3 generó paquete 49 con peso 4
+Clasificador 4 envió paquete 35 a cola NORMAL
+Escáner 4 procesó paquete 43
+Receptor 2 generó paquete 51 con peso 20
+Despachador 1 despachó paquete 27 - peso 5 - prioridad NORMAL - costo 500
+Escáner 2 procesó paquete 42
+Escáner 1 procesó paquete 38
+Despachador 3 despachó paquete 32 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 4 envió paquete 42 a cola PRIORIDAD
+Despachador 2 despachó paquete 42 - peso 12 - prioridad ALTA - costo 1200
+Receptor 3 generó paquete 54 con peso 9
+Clasificador 1 envió paquete 36 a cola NORMAL
+Clasificador 3 envió paquete 39 a cola NORMAL
+Escáner 1 procesó paquete 45
+Escáner 2 procesó paquete 47
+Receptor 1 generó paquete 52 con peso 20
+Clasificador 4 envió paquete 38 a cola PRIORIDAD
+Despachador 1 despachó paquete 38 - peso 19 - prioridad ALTA - costo 1900
+Escáner 2 procesó paquete 48
+Receptor 4 generó paquete 53 con peso 16
+Clasificador 2 envió paquete 43 a cola PRIORIDAD
+Despachador 1 despachó paquete 43 - peso 14 - prioridad ALTA - costo 1400
+Clasificador 1 envió paquete 45 a cola NORMAL
+Escáner 3 procesó paquete 41
+Receptor 2 generó paquete 55 con peso 8
+Despachador 3 despachó paquete 33 - peso 4 - prioridad NORMAL - costo 400
+Escáner 2 procesó paquete 50
+Receptor 3 generó paquete 56 con peso 11
+Despachador 2 despachó paquete 34 - peso 3 - prioridad NORMAL - costo 300
+Receptor 1 generó paquete 57 con peso 20
+Clasificador 2 envió paquete 41 a cola NORMAL
+Escáner 4 procesó paquete 44
+Clasificador 2 envió paquete 44 a cola PRIORIDAD
+Clasificador 3 envió paquete 47 a cola NORMAL
+Clasificador 4 envió paquete 48 a cola PRIORIDAD
+Receptor 4 generó paquete 58 con peso 14
+Despachador 1 despachó paquete 44 - peso 19 - prioridad ALTA - costo 1900
+Despachador 2 despachó paquete 48 - peso 17 - prioridad ALTA - costo 1700
+Despachador 3 despachó paquete 31 - peso 3 - prioridad NORMAL - costo 300
+Clasificador 1 envió paquete 50 a cola PRIORIDAD
+Despachador 1 despachó paquete 50 - peso 15 - prioridad ALTA - costo 1500
+Despachador 2 despachó paquete 37 - peso 6 - prioridad NORMAL - costo 600
+Escáner 1 procesó paquete 46
+Receptor 2 generó paquete 59 con peso 10
+Escáner 3 procesó paquete 49
+Receptor 1 generó paquete 61 con peso 7
+Receptor 4 generó paquete 62 con peso 7
+Receptor 3 generó paquete 60 con peso 10
+Despachador 3 despachó paquete 40 - peso 9 - prioridad NORMAL - costo 900
+Despachador 1 despachó paquete 35 - peso 3 - prioridad NORMAL - costo 300
+Escáner 1 procesó paquete 52
+Receptor 2 generó paquete 63 con peso 4
+Clasificador 4 envió paquete 52 a cola PRIORIDAD
+Escáner 4 procesó paquete 54
+Escáner 3 procesó paquete 53
+Clasificador 2 envió paquete 46 a cola PRIORIDAD
+Escáner 2 procesó paquete 51
+Clasificador 3 envió paquete 49 a cola NORMAL
+Clasificador 4 envió paquete 53 a cola PRIORIDAD
+Receptor 4 generó paquete 65 con peso 19
+Receptor 3 generó paquete 66 con peso 13
+Clasificador 2 envió paquete 51 a cola PRIORIDAD
+Despachador 2 despachó paquete 52 - peso 20 - prioridad ALTA - costo 2000
+Escáner 4 procesó paquete 56
+Despachador 2 despachó paquete 46 - peso 12 - prioridad ALTA - costo 1200
+Receptor 1 generó paquete 64 con peso 11
+Despachador 1 despachó paquete 53 - peso 16 - prioridad ALTA - costo 1600
+Clasificador 3 envió paquete 56 a cola PRIORIDAD
+Despachador 2 despachó paquete 36 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 1 envió paquete 54 a cola NORMAL
+Despachador 3 despachó paquete 51 - peso 20 - prioridad ALTA - costo 2000
+Despachador 1 despachó paquete 56 - peso 11 - prioridad ALTA - costo 1100
+Despachador 1 despachó paquete 39 - peso 10 - prioridad NORMAL - costo 1000
+Receptor 2 generó paquete 67 con peso 15
+Escáner 2 procesó paquete 58
+Escáner 2 procesó paquete 61
+Receptor 3 generó paquete 69 con peso 1
+Receptor 1 generó paquete 70 con peso 17
+Despachador 3 despachó paquete 45 - peso 8 - prioridad NORMAL - costo 800
+Escáner 3 procesó paquete 57
+Receptor 4 generó paquete 68 con peso 8
+Clasificador 4 envió paquete 58 a cola PRIORIDAD
+Clasificador 2 envió paquete 61 a cola NORMAL
+Escáner 1 procesó paquete 55
+Receptor 3 generó paquete 72 con peso 8
+Clasificador 3 envió paquete 57 a cola PRIORIDAD
+Despachador 1 despachó paquete 58 - peso 14 - prioridad ALTA - costo 1400
+Despachador 2 despachó paquete 57 - peso 20 - prioridad ALTA - costo 2000
+Escáner 4 procesó paquete 59
+Receptor 2 generó paquete 71 con peso 6
+Despachador 1 despachó paquete 41 - peso 1 - prioridad NORMAL - costo 100
+Receptor 1 generó paquete 73 con peso 16
+Despachador 2 despachó paquete 47 - peso 3 - prioridad NORMAL - costo 300
+Receptor 4 generó paquete 74 con peso 2
+Clasificador 4 envió paquete 59 a cola NORMAL
+Clasificador 1 envió paquete 55 a cola NORMAL
+Despachador 3 despachó paquete 49 - peso 4 - prioridad NORMAL - costo 400
+Despachador 1 despachó paquete 54 - peso 9 - prioridad NORMAL - costo 900
+Escáner 3 procesó paquete 60
+Escáner 2 procesó paquete 62
+Despachador 3 despachó paquete 61 - peso 7 - prioridad NORMAL - costo 700
+Escáner 4 procesó paquete 65
+Receptor 3 generó paquete 75 con peso 14
+Escáner 4 procesó paquete 67
+Clasificador 3 envió paquete 62 a cola NORMAL
+Despachador 2 despachó paquete 59 - peso 10 - prioridad NORMAL - costo 1000
+Clasificador 2 envió paquete 60 a cola NORMAL
+Escáner 1 procesó paquete 63
+Clasificador 3 envió paquete 63 a cola NORMAL
+Receptor 2 generó paquete 76 con peso 11
+Receptor 1 generó paquete 77 con peso 20
+Receptor 4 generó paquete 78 con peso 12
+Despachador 1 despachó paquete 55 - peso 8 - prioridad NORMAL - costo 800
+Escáner 2 procesó paquete 64
+Despachador 1 despachó paquete 62 - peso 7 - prioridad NORMAL - costo 700
+Clasificador 4 envió paquete 65 a cola PRIORIDAD
+Escáner 4 procesó paquete 69
+Escáner 2 procesó paquete 68
+Clasificador 2 envió paquete 64 a cola PRIORIDAD
+Receptor 1 generó paquete 81 con peso 3
+Despachador 2 despachó paquete 65 - peso 19 - prioridad ALTA - costo 1900
+Escáner 3 procesó paquete 66
+Escáner 4 procesó paquete 72
+Clasificador 4 envió paquete 68 a cola NORMAL
+Despachador 3 despachó paquete 64 - peso 11 - prioridad ALTA - costo 1100
+Receptor 3 generó paquete 79 con peso 9
+Clasificador 2 envió paquete 66 a cola PRIORIDAD
+Receptor 2 generó paquete 80 con peso 14
+Clasificador 1 envió paquete 67 a cola PRIORIDAD
+Escáner 1 procesó paquete 70
+Receptor 4 generó paquete 82 con peso 20
+Clasificador 2 envió paquete 70 a cola PRIORIDAD
+Escáner 2 procesó paquete 71
+Despachador 1 despachó paquete 66 - peso 13 - prioridad ALTA - costo 1300
+Escáner 3 procesó paquete 73
+Despachador 2 despachó paquete 60 - peso 10 - prioridad NORMAL - costo 1000
+Escáner 3 procesó paquete 77
+Clasificador 3 envió paquete 69 a cola NORMAL
+Despachador 3 despachó paquete 67 - peso 15 - prioridad ALTA - costo 1500
+Receptor 1 generó paquete 83 con peso 2
+Clasificador 4 envió paquete 72 a cola NORMAL
+Receptor 2 generó paquete 85 con peso 18
+Receptor 3 generó paquete 84 con peso 20
+Clasificador 1 envió paquete 71 a cola NORMAL
+Escáner 3 procesó paquete 78
+Receptor 4 generó paquete 86 con peso 12
+Despachador 2 despachó paquete 70 - peso 17 - prioridad ALTA - costo 1700
+Escáner 3 procesó paquete 81
+Escáner 1 procesó paquete 75
+Clasificador 2 envió paquete 73 a cola PRIORIDAD
+Receptor 1 generó paquete 87 con peso 16
+Despachador 3 despachó paquete 73 - peso 16 - prioridad ALTA - costo 1600
+Escáner 1 procesó paquete 80
+Clasificador 2 envió paquete 75 a cola PRIORIDAD
+Despachador 1 despachó paquete 63 - peso 4 - prioridad NORMAL - costo 400
+Clasificador 3 envió paquete 77 a cola PRIORIDAD
+Escáner 4 procesó paquete 74
+Escáner 2 procesó paquete 76
+Escáner 3 procesó paquete 79
+Despachador 2 despachó paquete 75 - peso 14 - prioridad ALTA - costo 1400
+Clasificador 1 envió paquete 81 a cola NORMAL
+Receptor 2 generó paquete 88 con peso 17
+Clasificador 4 envió paquete 78 a cola PRIORIDAD
+Clasificador 3 envió paquete 74 a cola NORMAL
+Despachador 2 despachó paquete 77 - peso 20 - prioridad ALTA - costo 2000
+Despachador 1 despachó paquete 78 - peso 12 - prioridad ALTA - costo 1200
+Despachador 1 despachó paquete 68 - peso 8 - prioridad NORMAL - costo 800
+Clasificador 4 envió paquete 79 a cola NORMAL
+Escáner 1 procesó paquete 82
+Receptor 3 generó paquete 89 con peso 2
+Receptor 1 generó paquete 91 con peso 15
+Clasificador 3 envió paquete 82 a cola PRIORIDAD
+Despachador 3 despachó paquete 82 - peso 20 - prioridad ALTA - costo 2000
+Despachador 1 despachó paquete 69 - peso 1 - prioridad NORMAL - costo 100
+Clasificador 2 envió paquete 80 a cola PRIORIDAD
+Clasificador 1 envió paquete 76 a cola PRIORIDAD
+Escáner 1 procesó paquete 86
+Receptor 4 generó paquete 90 con peso 4
+Escáner 3 procesó paquete 84
+Escáner 2 procesó paquete 85
+Receptor 2 generó paquete 92 con peso 7
+Clasificador 4 envió paquete 86 a cola PRIORIDAD
+Despachador 2 despachó paquete 80 - peso 14 - prioridad ALTA - costo 1400
+Receptor 1 generó paquete 94 con peso 13
+Despachador 1 despachó paquete 76 - peso 11 - prioridad ALTA - costo 1100
+Despachador 3 despachó paquete 86 - peso 12 - prioridad ALTA - costo 1200
+Escáner 2 procesó paquete 89
+Clasificador 2 envió paquete 85 a cola PRIORIDAD
+Clasificador 3 envió paquete 84 a cola PRIORIDAD
+Receptor 3 generó paquete 93 con peso 7
+Escáner 4 procesó paquete 83
+Clasificador 1 envió paquete 89 a cola NORMAL
+Despachador 2 despachó paquete 72 - peso 8 - prioridad NORMAL - costo 800
+Escáner 1 procesó paquete 87
+Despachador 2 despachó paquete 85 - peso 18 - prioridad ALTA - costo 1800
+Receptor 4 generó paquete 95 con peso 18
+Clasificador 2 envió paquete 87 a cola PRIORIDAD
+Escáner 3 procesó paquete 88
+Escáner 1 procesó paquete 92
+Clasificador 3 envió paquete 88 a cola PRIORIDAD
+Clasificador 4 envió paquete 83 a cola NORMAL
+Receptor 2 generó paquete 96 con peso 6
+Despachador 1 despachó paquete 84 - peso 20 - prioridad ALTA - costo 2000
+Receptor 1 generó paquete 97 con peso 12
+Despachador 3 despachó paquete 87 - peso 16 - prioridad ALTA - costo 1600
+Escáner 4 procesó paquete 90
+Despachador 1 despachó paquete 71 - peso 6 - prioridad NORMAL - costo 600
+Escáner 1 procesó paquete 93
+Despachador 2 despachó paquete 88 - peso 17 - prioridad ALTA - costo 1700
+Receptor 4 generó paquete 99 con peso 2
+Receptor 3 generó paquete 98 con peso 11
+Clasificador 1 envió paquete 92 a cola NORMAL
+Clasificador 2 envió paquete 90 a cola NORMAL
+Escáner 2 procesó paquete 91
+Escáner 2 procesó paquete 97
+Receptor 2 generó paquete 100 con peso 15
+Escáner 1 procesó paquete 96
+Clasificador 1 envió paquete 97 a cola PRIORIDAD
+Receptor 1 generó paquete 101 con peso 9
+Clasificador 3 envió paquete 93 a cola NORMAL
+Despachador 3 despachó paquete 97 - peso 12 - prioridad ALTA - costo 1200
+Despachador 2 despachó paquete 81 - peso 3 - prioridad NORMAL - costo 300
+Despachador 1 despachó paquete 74 - peso 2 - prioridad NORMAL - costo 200
+Escáner 3 procesó paquete 94
+Clasificador 2 envió paquete 96 a cola NORMAL
+Receptor 2 generó paquete 104 con peso 13
+Receptor 4 generó paquete 102 con peso 19
+Escáner 4 procesó paquete 95
+Despachador 2 despachó paquete 79 - peso 9 - prioridad NORMAL - costo 900
+Despachador 3 despachó paquete 89 - peso 2 - prioridad NORMAL - costo 200
+Receptor 3 generó paquete 103 con peso 2
+Receptor 1 generó paquete 105 con peso 13
+Clasificador 4 envió paquete 91 a cola PRIORIDAD
+Clasificador 3 envió paquete 95 a cola PRIORIDAD
+Escáner 3 procesó paquete 100
+Despachador 1 despachó paquete 91 - peso 15 - prioridad ALTA - costo 1500
+Escáner 1 procesó paquete 98
+Clasificador 2 envió paquete 100 a cola PRIORIDAD
+Receptor 4 generó paquete 107 con peso 2
+Escáner 2 procesó paquete 99
+Despachador 3 despachó paquete 95 - peso 18 - prioridad ALTA - costo 1800
+Receptor 2 generó paquete 106 con peso 18
+Clasificador 1 envió paquete 94 a cola PRIORIDAD
+Despachador 2 despachó paquete 100 - peso 15 - prioridad ALTA - costo 1500
+Receptor 1 generó paquete 109 con peso 12
+Despachador 1 despachó paquete 83 - peso 2 - prioridad NORMAL - costo 200
+Receptor 3 generó paquete 108 con peso 2
+Escáner 4 procesó paquete 101
+Clasificador 3 envió paquete 99 a cola NORMAL
+Escáner 3 procesó paquete 104
+Clasificador 4 envió paquete 98 a cola PRIORIDAD
+Escáner 2 procesó paquete 103
+Receptor 4 generó paquete 110 con peso 6
+Escáner 1 procesó paquete 102
+Receptor 2 generó paquete 111 con peso 16
+Receptor 1 generó paquete 112 con peso 19
+Escáner 4 procesó paquete 105
+Clasificador 2 envió paquete 101 a cola NORMAL
+Despachador 3 despachó paquete 94 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 3 envió paquete 103 a cola NORMAL
+Clasificador 4 envió paquete 102 a cola PRIORIDAD
+Despachador 1 despachó paquete 98 - peso 11 - prioridad ALTA - costo 1100
+Escáner 1 procesó paquete 109
+Despachador 2 despachó paquete 102 - peso 19 - prioridad ALTA - costo 1900
+Escáner 3 procesó paquete 107
+Receptor 2 generó paquete 115 con peso 11
+Receptor 3 generó paquete 113 con peso 2
+Clasificador 1 envió paquete 104 a cola PRIORIDAD
+Clasificador 2 envió paquete 105 a cola PRIORIDAD
+Receptor 4 generó paquete 114 con peso 7
+Clasificador 4 envió paquete 107 a cola NORMAL
+Despachador 2 despachó paquete 92 - peso 7 - prioridad NORMAL - costo 700
+Receptor 1 generó paquete 116 con peso 1
+Escáner 2 procesó paquete 106
+Despachador 3 despachó paquete 104 - peso 13 - prioridad ALTA - costo 1300
+Receptor 4 generó paquete 119 con peso 3
+Despachador 2 despachó paquete 105 - peso 13 - prioridad ALTA - costo 1300
+Despachador 1 despachó paquete 90 - peso 4 - prioridad NORMAL - costo 400
+Escáner 1 procesó paquete 110
+Despachador 2 despachó paquete 93 - peso 7 - prioridad NORMAL - costo 700
+Clasificador 3 envió paquete 109 a cola PRIORIDAD
+Clasificador 2 envió paquete 110 a cola NORMAL
+Escáner 3 procesó paquete 111
+Despachador 2 despachó paquete 109 - peso 12 - prioridad ALTA - costo 1200
+Receptor 2 generó paquete 117 con peso 9
+Despachador 3 despachó paquete 96 - peso 6 - prioridad NORMAL - costo 600
+Receptor 3 generó paquete 118 con peso 13
+Clasificador 1 envió paquete 106 a cola PRIORIDAD
+Escáner 4 procesó paquete 108
+Despachador 3 despachó paquete 106 - peso 18 - prioridad ALTA - costo 1800
+Receptor 1 generó paquete 120 con peso 9
+Despachador 3 despachó paquete 99 - peso 2 - prioridad NORMAL - costo 200
+Receptor 4 generó paquete 121 con peso 1
+Receptor 3 generó paquete 123 con peso 1
+Escáner 4 procesó paquete 114
+Despachador 1 despachó paquete 101 - peso 9 - prioridad NORMAL - costo 900
+Receptor 2 generó paquete 122 con peso 19
+Escáner 2 procesó paquete 112
+Clasificador 3 envió paquete 108 a cola NORMAL
+Clasificador 4 envió paquete 111 a cola PRIORIDAD
+Escáner 1 procesó paquete 115
+Despachador 2 despachó paquete 111 - peso 16 - prioridad ALTA - costo 1600
+Escáner 4 procesó paquete 116
+Despachador 3 despachó paquete 103 - peso 2 - prioridad NORMAL - costo 200
+Clasificador 3 envió paquete 115 a cola PRIORIDAD
+Escáner 3 procesó paquete 113
+Clasificador 2 envió paquete 114 a cola NORMAL
+Despachador 1 despachó paquete 115 - peso 11 - prioridad ALTA - costo 1100
+Despachador 3 despachó paquete 107 - peso 2 - prioridad NORMAL - costo 200
+Receptor 4 generó paquete 125 con peso 14
+Receptor 1 generó paquete 124 con peso 8
+Despachador 1 despachó paquete 110 - peso 6 - prioridad NORMAL - costo 600
+Escáner 4 procesó paquete 118
+Receptor 2 generó paquete 127 con peso 13
+Escáner 4 procesó paquete 121
+Receptor 3 generó paquete 126 con peso 15
+Clasificador 4 envió paquete 116 a cola NORMAL
+Clasificador 4 envió paquete 121 a cola NORMAL
+Clasificador 2 envió paquete 118 a cola PRIORIDAD
+Escáner 3 procesó paquete 120
+Clasificador 1 envió paquete 112 a cola PRIORIDAD
+Clasificador 3 envió paquete 113 a cola NORMAL
+Escáner 1 procesó paquete 117
+Despachador 2 despachó paquete 118 - peso 13 - prioridad ALTA - costo 1300
+Escáner 4 procesó paquete 123
+Clasificador 1 envió paquete 123 a cola NORMAL
+Despachador 3 despachó paquete 112 - peso 19 - prioridad ALTA - costo 1900
+Escáner 2 procesó paquete 119
+Receptor 2 generó paquete 130 con peso 6
+Escáner 1 procesó paquete 125
+Receptor 1 generó paquete 129 con peso 19
+Despachador 1 despachó paquete 108 - peso 2 - prioridad NORMAL - costo 200
+Despachador 3 despachó paquete 114 - peso 7 - prioridad NORMAL - costo 700
+Receptor 3 generó paquete 131 con peso 6
+Receptor 4 generó paquete 128 con peso 8
+Clasificador 2 envió paquete 117 a cola NORMAL
+Despachador 2 despachó paquete 116 - peso 1 - prioridad NORMAL - costo 100
+Receptor 2 generó paquete 132 con peso 15
+Clasificador 4 envió paquete 120 a cola NORMAL
+Clasificador 3 envió paquete 119 a cola NORMAL
+Despachador 1 despachó paquete 121 - peso 1 - prioridad NORMAL - costo 100
+Escáner 4 procesó paquete 124
+Clasificador 2 envió paquete 124 a cola NORMAL
+Despachador 2 despachó paquete 113 - peso 2 - prioridad NORMAL - costo 200
+Clasificador 1 envió paquete 125 a cola PRIORIDAD
+Receptor 1 generó paquete 133 con peso 13
+Escáner 1 procesó paquete 126
+Escáner 3 procesó paquete 122
+Clasificador 4 envió paquete 126 a cola PRIORIDAD
+Receptor 3 generó paquete 134 con peso 7
+Receptor 4 generó paquete 135 con peso 11
+Despachador 3 despachó paquete 125 - peso 14 - prioridad ALTA - costo 1400
+Receptor 2 generó paquete 136 con peso 4
+Despachador 1 despachó paquete 126 - peso 15 - prioridad ALTA - costo 1500
+Despachador 1 despachó paquete 123 - peso 1 - prioridad NORMAL - costo 100
+Escáner 2 procesó paquete 127
+Receptor 1 generó paquete 137 con peso 5
+Clasificador 2 envió paquete 127 a cola PRIORIDAD
+Despachador 2 despachó paquete 127 - peso 13 - prioridad ALTA - costo 1300
+Escáner 3 procesó paquete 131
+Despachador 1 despachó paquete 117 - peso 9 - prioridad NORMAL - costo 900
+Receptor 3 generó paquete 138 con peso 20
+Clasificador 3 envió paquete 122 a cola PRIORIDAD
+Despachador 1 despachó paquete 122 - peso 19 - prioridad ALTA - costo 1900
+Receptor 4 generó paquete 139 con peso 15
+Escáner 4 procesó paquete 130
+Despachador 3 despachó paquete 120 - peso 9 - prioridad NORMAL - costo 900
+Escáner 1 procesó paquete 129
+Escáner 3 procesó paquete 132
+Receptor 2 generó paquete 140 con peso 4
+Clasificador 1 envió paquete 131 a cola NORMAL
+Despachador 1 despachó paquete 119 - peso 3 - prioridad NORMAL - costo 300
+Escáner 3 procesó paquete 135
+Receptor 1 generó paquete 141 con peso 1
+Clasificador 3 envió paquete 132 a cola PRIORIDAD
+Clasificador 4 envió paquete 130 a cola NORMAL
+Despachador 2 despachó paquete 132 - peso 15 - prioridad ALTA - costo 1500
+Clasificador 2 envió paquete 129 a cola PRIORIDAD
+Clasificador 1 envió paquete 135 a cola PRIORIDAD
+Despachador 3 despachó paquete 129 - peso 19 - prioridad ALTA - costo 1900
+Escáner 2 procesó paquete 128
+Receptor 3 generó paquete 142 con peso 8
+Receptor 4 generó paquete 143 con peso 17
+Receptor 2 generó paquete 144 con peso 19
+Escáner 3 procesó paquete 136
+Receptor 1 generó paquete 145 con peso 2
+Clasificador 4 envió paquete 136 a cola NORMAL
+Despachador 1 despachó paquete 135 - peso 11 - prioridad ALTA - costo 1100
+Escáner 3 procesó paquete 138
+Escáner 1 procesó paquete 134
+Escáner 3 procesó paquete 139
+Clasificador 2 envió paquete 138 a cola PRIORIDAD
+Despachador 2 despachó paquete 124 - peso 8 - prioridad NORMAL - costo 800
+Despachador 2 despachó paquete 138 - peso 20 - prioridad ALTA - costo 2000
+Escáner 4 procesó paquete 133
+Escáner 1 procesó paquete 140
+Receptor 4 generó paquete 147 con peso 18
+Clasificador 3 envió paquete 128 a cola NORMAL
+Receptor 3 generó paquete 146 con peso 10
+Escáner 2 procesó paquete 137
+Despachador 3 despachó paquete 131 - peso 6 - prioridad NORMAL - costo 600
+Receptor 1 generó paquete 149 con peso 7
+Receptor 2 generó paquete 148 con peso 18
+Clasificador 1 envió paquete 134 a cola NORMAL
+Clasificador 4 envió paquete 139 a cola PRIORIDAD
+Despachador 1 despachó paquete 139 - peso 15 - prioridad ALTA - costo 1500
+Escáner 3 procesó paquete 141
+Receptor 3 generó paquete 151 con peso 18
+Despachador 2 despachó paquete 130 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 2 envió paquete 133 a cola PRIORIDAD
+Clasificador 3 envió paquete 140 a cola NORMAL
+Despachador 3 despachó paquete 133 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 4 envió paquete 141 a cola NORMAL
+Escáner 1 procesó paquete 143
+Receptor 4 generó paquete 150 con peso 7
+Clasificador 1 envió paquete 137 a cola NORMAL
+Escáner 1 procesó paquete 147
+Despachador 3 despachó paquete 136 - peso 4 - prioridad NORMAL - costo 400
+Clasificador 2 envió paquete 143 a cola PRIORIDAD
+Receptor 1 generó paquete 152 con peso 13
+Despachador 2 despachó paquete 143 - peso 17 - prioridad ALTA - costo 1700
+Escáner 2 procesó paquete 144
+Receptor 2 generó paquete 153 con peso 10
+Despachador 1 despachó paquete 128 - peso 8 - prioridad NORMAL - costo 800
+Escáner 4 procesó paquete 142
+Despachador 1 despachó paquete 134 - peso 7 - prioridad NORMAL - costo 700
+Receptor 4 generó paquete 155 con peso 10
+Receptor 3 generó paquete 154 con peso 7
+Despachador 1 despachó paquete 140 - peso 4 - prioridad NORMAL - costo 400
+Receptor 1 generó paquete 156 con peso 7
+Clasificador 4 envió paquete 144 a cola PRIORIDAD
+Escáner 3 procesó paquete 145
+Despachador 1 despachó paquete 144 - peso 19 - prioridad ALTA - costo 1900
+Clasificador 1 envió paquete 142 a cola NORMAL
+Receptor 2 generó paquete 157 con peso 15
+Despachador 3 despachó paquete 141 - peso 1 - prioridad NORMAL - costo 100
+Clasificador 3 envió paquete 147 a cola PRIORIDAD
+Despachador 2 despachó paquete 147 - peso 18 - prioridad ALTA - costo 1800
+Receptor 4 generó paquete 158 con peso 1
+Escáner 2 procesó paquete 149
+Despachador 3 despachó paquete 137 - peso 5 - prioridad NORMAL - costo 500
+Receptor 3 generó paquete 159 con peso 12
+Clasificador 2 envió paquete 145 a cola NORMAL
+Receptor 1 generó paquete 160 con peso 16
+Escáner 4 procesó paquete 148
+Despachador 2 despachó paquete 142 - peso 8 - prioridad NORMAL - costo 800
+Despachador 1 despachó paquete 145 - peso 2 - prioridad NORMAL - costo 200
+Clasificador 1 envió paquete 148 a cola PRIORIDAD
+Escáner 3 procesó paquete 151
+Escáner 1 procesó paquete 146
+Receptor 4 generó paquete 162 con peso 2
+Receptor 2 generó paquete 161 con peso 18
+Despachador 3 despachó paquete 148 - peso 18 - prioridad ALTA - costo 1800
+Escáner 1 procesó paquete 155
+Receptor 3 generó paquete 163 con peso 13
+Clasificador 4 envió paquete 149 a cola NORMAL
+Escáner 3 procesó paquete 153
+Clasificador 4 envió paquete 153 a cola NORMAL
+Despachador 2 despachó paquete 149 - peso 7 - prioridad NORMAL - costo 700
+Receptor 1 generó paquete 164 con peso 8
+Escáner 4 procesó paquete 152
+Escáner 3 procesó paquete 156
+Clasificador 4 envió paquete 152 a cola PRIORIDAD
+Receptor 3 generó paquete 167 con peso 13
+Clasificador 1 envió paquete 155 a cola NORMAL
+Escáner 1 procesó paquete 154
+Clasificador 2 envió paquete 146 a cola NORMAL
+Receptor 2 generó paquete 166 con peso 2
+Clasificador 3 envió paquete 151 a cola PRIORIDAD
+Receptor 4 generó paquete 165 con peso 12
+Despachador 1 despachó paquete 152 - peso 13 - prioridad ALTA - costo 1300
+Escáner 2 procesó paquete 150
+Clasificador 2 envió paquete 150 a cola NORMAL
+Clasificador 4 envió paquete 156 a cola NORMAL
+Despachador 2 despachó paquete 151 - peso 18 - prioridad ALTA - costo 1800
+Escáner 3 procesó paquete 158
+Despachador 2 despachó paquete 153 - peso 10 - prioridad NORMAL - costo 1000
+Despachador 2 despachó paquete 155 - peso 10 - prioridad NORMAL - costo 1000
+Receptor 1 generó paquete 168 con peso 10
+Despachador 1 despachó paquete 146 - peso 10 - prioridad NORMAL - costo 1000
+Clasificador 1 envió paquete 154 a cola NORMAL
+Receptor 3 generó paquete 169 con peso 12
+Despachador 3 despachó paquete 150 - peso 7 - prioridad NORMAL - costo 700
+Despachador 2 despachó paquete 156 - peso 7 - prioridad NORMAL - costo 700
+Receptor 2 generó paquete 170 con peso 15
+Escáner 4 procesó paquete 157
+Escáner 4 procesó paquete 161
+Escáner 1 procesó paquete 159
+Escáner 2 procesó paquete 160
+Receptor 4 generó paquete 171 con peso 20
+Clasificador 2 envió paquete 157 a cola PRIORIDAD
+Despachador 1 despachó paquete 157 - peso 15 - prioridad ALTA - costo 1500
+Clasificador 3 envió paquete 158 a cola NORMAL
+Receptor 1 generó paquete 172 con peso 3
+Clasificador 1 envió paquete 159 a cola PRIORIDAD
+Clasificador 2 envió paquete 160 a cola PRIORIDAD
+Receptor 3 generó paquete 173 con peso 12
+Clasificador 4 envió paquete 161 a cola PRIORIDAD
+Despachador 1 despachó paquete 159 - peso 12 - prioridad ALTA - costo 1200
+Escáner 4 procesó paquete 163
+Receptor 2 generó paquete 174 con peso 11
+Escáner 3 procesó paquete 162
+Despachador 2 despachó paquete 160 - peso 16 - prioridad ALTA - costo 1600
+Escáner 2 procesó paquete 167
+Escáner 2 procesó paquete 168
+Escáner 1 procesó paquete 164
+Receptor 4 generó paquete 175 con peso 12
+Receptor 1 generó paquete 176 con peso 18
+Despachador 3 despachó paquete 154 - peso 7 - prioridad NORMAL - costo 700
+Escáner 3 procesó paquete 165
+Clasificador 3 envió paquete 163 a cola PRIORIDAD
+Despachador 2 despachó paquete 161 - peso 18 - prioridad ALTA - costo 1800
+Despachador 1 despachó paquete 163 - peso 13 - prioridad ALTA - costo 1300
+Receptor 3 generó paquete 177 con peso 13
+Clasificador 1 envió paquete 162 a cola NORMAL
+Receptor 2 generó paquete 178 con peso 20
+Clasificador 3 envió paquete 164 a cola NORMAL
+Clasificador 2 envió paquete 167 a cola PRIORIDAD
+Escáner 2 procesó paquete 169
+Clasificador 4 envió paquete 168 a cola NORMAL
+Receptor 1 generó paquete 180 con peso 20
+Escáner 1 procesó paquete 170
+Receptor 4 generó paquete 179 con peso 14
+Despachador 3 despachó paquete 167 - peso 13 - prioridad ALTA - costo 1300
+Escáner 1 procesó paquete 173
+Clasificador 1 envió paquete 165 a cola PRIORIDAD
+Escáner 3 procesó paquete 171
+Despachador 2 despachó paquete 158 - peso 1 - prioridad NORMAL - costo 100
+Escáner 4 procesó paquete 166
+Receptor 3 generó paquete 181 con peso 11
+Receptor 2 generó paquete 182 con peso 11
+Clasificador 1 envió paquete 171 a cola PRIORIDAD
+Clasificador 2 envió paquete 170 a cola PRIORIDAD
+Clasificador 3 envió paquete 169 a cola PRIORIDAD
+Despachador 2 despachó paquete 165 - peso 12 - prioridad ALTA - costo 1200
+Despachador 1 despachó paquete 171 - peso 20 - prioridad ALTA - costo 2000
+Clasificador 1 envió paquete 166 a cola NORMAL
+Despachador 2 despachó paquete 170 - peso 15 - prioridad ALTA - costo 1500
+Clasificador 4 envió paquete 173 a cola PRIORIDAD
+Despachador 1 despachó paquete 162 - peso 2 - prioridad NORMAL - costo 200
+Escáner 1 procesó paquete 174
+Receptor 1 generó paquete 183 con peso 20
+Receptor 4 generó paquete 184 con peso 9
+Despachador 3 despachó paquete 169 - peso 12 - prioridad ALTA - costo 1200
+Escáner 2 procesó paquete 172
+Despachador 2 despachó paquete 173 - peso 12 - prioridad ALTA - costo 1200
+Receptor 3 generó paquete 185 con peso 1
+Receptor 2 generó paquete 186 con peso 10
+Escáner 4 procesó paquete 176
+Despachador 2 despachó paquete 164 - peso 8 - prioridad NORMAL - costo 800
+Clasificador 3 envió paquete 172 a cola NORMAL
+Escáner 3 procesó paquete 175
+Despachador 3 despachó paquete 168 - peso 10 - prioridad NORMAL - costo 1000
+Despachador 1 despachó paquete 166 - peso 2 - prioridad NORMAL - costo 200
+Escáner 2 procesó paquete 178
+Receptor 1 generó paquete 187 con peso 12
+Receptor 4 generó paquete 188 con peso 9
+Escáner 1 procesó paquete 177
+Escáner 3 procesó paquete 179
+Escáner 2 procesó paquete 181
+Clasificador 2 envió paquete 174 a cola PRIORIDAD
+Despachador 3 despachó paquete 174 - peso 11 - prioridad ALTA - costo 1100
+Receptor 3 generó paquete 189 con peso 13
+Clasificador 4 envió paquete 175 a cola PRIORIDAD
+Clasificador 2 envió paquete 177 a cola PRIORIDAD
+Escáner 4 procesó paquete 180
+Despachador 1 despachó paquete 175 - peso 12 - prioridad ALTA - costo 1200
+Receptor 2 generó paquete 190 con peso 20
+Clasificador 4 envió paquete 179 a cola PRIORIDAD
+Clasificador 1 envió paquete 176 a cola PRIORIDAD
+Receptor 1 generó paquete 191 con peso 16
+Escáner 1 procesó paquete 182
+Escáner 2 procesó paquete 184
+Clasificador 4 envió paquete 180 a cola PRIORIDAD
+Receptor 4 generó paquete 192 con peso 9
+Clasificador 4 envió paquete 184 a cola NORMAL
+Despachador 2 despachó paquete 177 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 3 envió paquete 178 a cola PRIORIDAD
+Escáner 4 procesó paquete 185
+Receptor 3 generó paquete 193 con peso 7
+Clasificador 4 envió paquete 185 a cola NORMAL
+Clasificador 2 envió paquete 181 a cola PRIORIDAD
+Escáner 4 procesó paquete 188
+Escáner 1 procesó paquete 186
+Receptor 4 generó paquete 196 con peso 14
+Escáner 3 procesó paquete 183
+Despachador 3 despachó paquete 172 - peso 3 - prioridad NORMAL - costo 300
+Receptor 1 generó paquete 195 con peso 1
+Clasificador 1 envió paquete 182 a cola PRIORIDAD
+Despachador 1 despachó paquete 179 - peso 14 - prioridad ALTA - costo 1400
+Escáner 4 procesó paquete 189
+Receptor 2 generó paquete 194 con peso 10
+Despachador 3 despachó paquete 176 - peso 18 - prioridad ALTA - costo 1800
+Clasificador 3 envió paquete 188 a cola NORMAL
+Clasificador 4 envió paquete 186 a cola NORMAL
+Clasificador 2 envió paquete 183 a cola PRIORIDAD
+Clasificador 1 envió paquete 189 a cola PRIORIDAD
+Despachador 2 despachó paquete 180 - peso 20 - prioridad ALTA - costo 2000
+Despachador 1 despachó paquete 184 - peso 9 - prioridad NORMAL - costo 900
+Receptor 4 generó paquete 198 con peso 6
+Escáner 3 procesó paquete 191
+Receptor 3 generó paquete 197 con peso 14
+Despachador 1 despachó paquete 178 - peso 20 - prioridad ALTA - costo 2000
+Escáner 1 procesó paquete 190
+Despachador 1 despachó paquete 181 - peso 11 - prioridad ALTA - costo 1100
+Escáner 2 procesó paquete 187
+Despachador 1 despachó paquete 182 - peso 11 - prioridad ALTA - costo 1100
+Receptor 1 generó paquete 199 con peso 10
+Receptor 2 generó paquete 200 con peso 18
+Despachador 2 despachó paquete 185 - peso 1 - prioridad NORMAL - costo 100
+Despachador 3 despachó paquete 183 - peso 20 - prioridad ALTA - costo 2000
+Escáner 3 procesó paquete 193
+Clasificador 2 envió paquete 187 a cola PRIORIDAD
+Receptor 3 generó paquete 202 con peso 8
+Escáner 4 procesó paquete 192
+Clasificador 3 envió paquete 191 a cola PRIORIDAD
+Clasificador 4 envió paquete 190 a cola PRIORIDAD
+Receptor 4 generó paquete 201 con peso 6
+Despachador 1 despachó paquete 189 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 1 envió paquete 193 a cola NORMAL
+Escáner 1 procesó paquete 196
+Escáner 2 procesó paquete 195
+Despachador 1 despachó paquete 187 - peso 12 - prioridad ALTA - costo 1200
+Receptor 2 generó paquete 204 con peso 19
+Escáner 3 procesó paquete 194
+Escáner 3 procesó paquete 200
+Receptor 1 generó paquete 203 con peso 19
+Despachador 2 despachó paquete 188 - peso 9 - prioridad NORMAL - costo 900
+Clasificador 3 envió paquete 196 a cola PRIORIDAD
+Despachador 1 despachó paquete 191 - peso 16 - prioridad ALTA - costo 1600
+Receptor 3 generó paquete 205 con peso 11
+Clasificador 1 envió paquete 194 a cola NORMAL
+Despachador 3 despachó paquete 190 - peso 20 - prioridad ALTA - costo 2000
+Escáner 2 procesó paquete 199
+Clasificador 1 envió paquete 199 a cola NORMAL
+Despachador 3 despachó paquete 196 - peso 14 - prioridad ALTA - costo 1400
+Clasificador 2 envió paquete 192 a cola NORMAL
+Despachador 2 despachó paquete 186 - peso 10 - prioridad NORMAL - costo 1000
+Clasificador 4 envió paquete 195 a cola NORMAL
+Receptor 3 generó paquete 209 con peso 13
+Receptor 4 generó paquete 206 con peso 16
+Escáner 1 procesó paquete 197
+Despachador 3 despachó paquete 193 - peso 7 - prioridad NORMAL - costo 700
+Receptor 2 generó paquete 207 con peso 6
+Receptor 1 generó paquete 208 con peso 3
+Despachador 1 despachó paquete 194 - peso 10 - prioridad NORMAL - costo 1000
+Escáner 4 procesó paquete 198
+Escáner 2 procesó paquete 201
+Clasificador 3 envió paquete 200 a cola PRIORIDAD
+Escáner 4 procesó paquete 203
+Escáner 4 procesó paquete 209
+Despachador 3 despachó paquete 200 - peso 18 - prioridad ALTA - costo 1800
+Despachador 1 despachó paquete 199 - peso 10 - prioridad NORMAL - costo 1000
+Clasificador 4 envió paquete 201 a cola NORMAL
+Receptor 3 generó paquete 210 con peso 10
+Clasificador 3 envió paquete 203 a cola PRIORIDAD
+Despachador 2 despachó paquete 203 - peso 19 - prioridad ALTA - costo 1900
+Escáner 3 procesó paquete 202
+Escáner 1 procesó paquete 204
+Clasificador 4 envió paquete 209 a cola PRIORIDAD
+Clasificador 3 envió paquete 202 a cola NORMAL
+Receptor 4 generó paquete 211 con peso 20
+Clasificador 1 envió paquete 197 a cola PRIORIDAD
+Receptor 1 generó paquete 213 con peso 12
+Escáner 4 procesó paquete 206
+Despachador 3 despachó paquete 209 - peso 13 - prioridad ALTA - costo 1300
+Receptor 3 generó paquete 214 con peso 2
+Clasificador 2 envió paquete 198 a cola NORMAL
+Receptor 2 generó paquete 212 con peso 14
+Despachador 2 despachó paquete 197 - peso 14 - prioridad ALTA - costo 1400
+Despachador 1 despachó paquete 192 - peso 9 - prioridad NORMAL - costo 900
+Despachador 3 despachó paquete 195 - peso 1 - prioridad NORMAL - costo 100
+Clasificador 4 envió paquete 204 a cola PRIORIDAD
+Escáner 3 procesó paquete 207
+Despachador 1 despachó paquete 204 - peso 19 - prioridad ALTA - costo 1900
+Clasificador 3 envió paquete 206 a cola PRIORIDAD
+Receptor 4 generó paquete 215 con peso 17
+Escáner 2 procesó paquete 205
+Escáner 1 procesó paquete 208
+Despachador 1 despachó paquete 206 - peso 16 - prioridad ALTA - costo 1600
+Escáner 2 procesó paquete 213
+Receptor 2 generó paquete 218 con peso 18
+Clasificador 4 envió paquete 208 a cola NORMAL
+Despachador 1 despachó paquete 201 - peso 6 - prioridad NORMAL - costo 600
+Receptor 1 generó paquete 216 con peso 5
+Despachador 3 despachó paquete 202 - peso 8 - prioridad NORMAL - costo 800
+Despachador 2 despachó paquete 198 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 3 envió paquete 213 a cola PRIORIDAD
+Clasificador 2 envió paquete 205 a cola PRIORIDAD
+Receptor 3 generó paquete 217 con peso 15
+Escáner 4 procesó paquete 210
+Despachador 1 despachó paquete 213 - peso 12 - prioridad ALTA - costo 1200
+Receptor 2 generó paquete 220 con peso 20
+Escáner 2 procesó paquete 212
+Receptor 4 generó paquete 219 con peso 6
+Clasificador 1 envió paquete 207 a cola NORMAL
+Despachador 3 despachó paquete 205 - peso 11 - prioridad ALTA - costo 1100
+Receptor 1 generó paquete 221 con peso 14
+Despachador 2 despachó paquete 208 - peso 3 - prioridad NORMAL - costo 300
+Escáner 3 procesó paquete 211
+Escáner 1 procesó paquete 214
+Escáner 3 procesó paquete 216
+Receptor 3 generó paquete 222 con peso 17
+Receptor 4 generó paquete 224 con peso 4
+Clasificador 4 envió paquete 210 a cola NORMAL
+Despachador 1 despachó paquete 207 - peso 6 - prioridad NORMAL - costo 600
+Receptor 1 generó paquete 225 con peso 4
+Receptor 2 generó paquete 223 con peso 13
+Clasificador 1 envió paquete 214 a cola NORMAL
+Clasificador 3 envió paquete 212 a cola PRIORIDAD
+Escáner 1 procesó paquete 217
+Escáner 4 procesó paquete 215
+Receptor 3 generó paquete 226 con peso 5
+Escáner 3 procesó paquete 220
+Clasificador 2 envió paquete 211 a cola PRIORIDAD
+Receptor 4 generó paquete 227 con peso 8
+Escáner 4 procesó paquete 221
+Escáner 2 procesó paquete 218
+Despachador 3 despachó paquete 212 - peso 14 - prioridad ALTA - costo 1400
+Receptor 1 generó paquete 228 con peso 8
+Despachador 1 despachó paquete 211 - peso 20 - prioridad ALTA - costo 2000
+Clasificador 1 envió paquete 217 a cola PRIORIDAD
+Clasificador 4 envió paquete 216 a cola NORMAL
+Clasificador 3 envió paquete 215 a cola PRIORIDAD
+Despachador 2 despachó paquete 217 - peso 15 - prioridad ALTA - costo 1500
+Receptor 2 generó paquete 229 con peso 12
+Receptor 4 generó paquete 231 con peso 8
+Receptor 3 generó paquete 230 con peso 9
+Clasificador 2 envió paquete 220 a cola PRIORIDAD
+Escáner 2 procesó paquete 225
+Despachador 1 despachó paquete 210 - peso 10 - prioridad NORMAL - costo 1000
+Escáner 3 procesó paquete 222
+Receptor 1 generó paquete 232 con peso 20
+Despachador 3 despachó paquete 215 - peso 17 - prioridad ALTA - costo 1700
+Despachador 3 despachó paquete 220 - peso 20 - prioridad ALTA - costo 2000
+Clasificador 1 envió paquete 221 a cola PRIORIDAD
+Escáner 1 procesó paquete 219
+Receptor 2 generó paquete 233 con peso 13
+Receptor 4 generó paquete 234 con peso 3
+Receptor 3 generó paquete 235 con peso 13
+Escáner 4 procesó paquete 224
+Clasificador 4 envió paquete 218 a cola PRIORIDAD
+Despachador 2 despachó paquete 221 - peso 14 - prioridad ALTA - costo 1400
+Escáner 2 procesó paquete 223
+Clasificador 3 envió paquete 225 a cola NORMAL
+Receptor 1 generó paquete 236 con peso 19
+Despachador 1 despachó paquete 214 - peso 2 - prioridad NORMAL - costo 200
+Clasificador 3 envió paquete 223 a cola PRIORIDAD
+Receptor 2 generó paquete 237 con peso 9
+Clasificador 1 envió paquete 219 a cola NORMAL
+Despachador 3 despachó paquete 218 - peso 18 - prioridad ALTA - costo 1800
+Clasificador 2 envió paquete 222 a cola PRIORIDAD
+Despachador 2 despachó paquete 223 - peso 13 - prioridad ALTA - costo 1300
+Receptor 4 generó paquete 238 con peso 8
+Escáner 4 procesó paquete 228
+Escáner 3 procesó paquete 226
+Receptor 3 generó paquete 239 con peso 11
+Clasificador 4 envió paquete 224 a cola NORMAL
+Clasificador 1 envió paquete 226 a cola NORMAL
+Despachador 2 despachó paquete 222 - peso 17 - prioridad ALTA - costo 1700
+Receptor 2 generó paquete 241 con peso 18
+Despachador 1 despachó paquete 216 - peso 5 - prioridad NORMAL - costo 500
+Escáner 1 procesó paquete 227
+Despachador 3 despachó paquete 225 - peso 4 - prioridad NORMAL - costo 400
+Receptor 1 generó paquete 240 con peso 6
+Despachador 3 despachó paquete 219 - peso 6 - prioridad NORMAL - costo 600
+Escáner 4 procesó paquete 231
+Escáner 2 procesó paquete 229
+Receptor 4 generó paquete 242 con peso 17
+Receptor 3 generó paquete 243 con peso 8
+Escáner 1 procesó paquete 232
+Despachador 1 despachó paquete 224 - peso 4 - prioridad NORMAL - costo 400
+Escáner 3 procesó paquete 230
+Despachador 2 despachó paquete 226 - peso 5 - prioridad NORMAL - costo 500
+Receptor 2 generó paquete 244 con peso 18
+Clasificador 2 envió paquete 227 a cola NORMAL
+Clasificador 3 envió paquete 228 a cola NORMAL
+Receptor 1 generó paquete 245 con peso 8
+Escáner 4 procesó paquete 233
+Despachador 1 despachó paquete 227 - peso 8 - prioridad NORMAL - costo 800
+Clasificador 3 envió paquete 230 a cola NORMAL
+Clasificador 1 envió paquete 229 a cola PRIORIDAD
+Escáner 2 procesó paquete 234
+Receptor 4 generó paquete 246 con peso 5
+Despachador 1 despachó paquete 229 - peso 12 - prioridad ALTA - costo 1200
+Escáner 3 procesó paquete 236
+Escáner 4 procesó paquete 237
+Clasificador 1 envió paquete 234 a cola NORMAL
+Clasificador 4 envió paquete 231 a cola NORMAL
+Despachador 3 despachó paquete 228 - peso 8 - prioridad NORMAL - costo 800
+Receptor 1 generó paquete 249 con peso 2
+Receptor 3 generó paquete 247 con peso 10
+Clasificador 3 envió paquete 233 a cola PRIORIDAD
+Clasificador 2 envió paquete 232 a cola PRIORIDAD
+Receptor 2 generó paquete 248 con peso 5
+Escáner 3 procesó paquete 239
+Escáner 2 procesó paquete 238
+Clasificador 1 envió paquete 236 a cola PRIORIDAD
+Receptor 4 generó paquete 250 con peso 14
+Despachador 3 despachó paquete 233 - peso 13 - prioridad ALTA - costo 1300
+Despachador 2 despachó paquete 232 - peso 20 - prioridad ALTA - costo 2000
+Escáner 1 procesó paquete 235
+Receptor 2 generó paquete 253 con peso 12
+Clasificador 2 envió paquete 238 a cola NORMAL
+Clasificador 3 envió paquete 239 a cola PRIORIDAD
+Clasificador 4 envió paquete 237 a cola NORMAL
+Receptor 3 generó paquete 252 con peso 3
+Despachador 2 despachó paquete 236 - peso 19 - prioridad ALTA - costo 1900
+Despachador 1 despachó paquete 230 - peso 9 - prioridad NORMAL - costo 900
+Despachador 2 despachó paquete 239 - peso 11 - prioridad ALTA - costo 1100
+Escáner 4 procesó paquete 241
+Despachador 3 despachó paquete 234 - peso 3 - prioridad NORMAL - costo 300
+Receptor 1 generó paquete 251 con peso 6
+Despachador 2 despachó paquete 231 - peso 8 - prioridad NORMAL - costo 800
+Clasificador 2 envió paquete 241 a cola PRIORIDAD
+Escáner 2 procesó paquete 242
+Despachador 1 despachó paquete 241 - peso 18 - prioridad ALTA - costo 1800
+Clasificador 1 envió paquete 235 a cola PRIORIDAD
+Receptor 4 generó paquete 254 con peso 14
+Receptor 2 generó paquete 255 con peso 3
+Receptor 3 generó paquete 256 con peso 14
+Despachador 2 despachó paquete 235 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 3 envió paquete 242 a cola PRIORIDAD
+Escáner 4 procesó paquete 244
+Escáner 3 procesó paquete 240
+Escáner 4 procesó paquete 246
+Escáner 1 procesó paquete 243
+Receptor 1 generó paquete 257 con peso 4
+Despachador 2 despachó paquete 242 - peso 17 - prioridad ALTA - costo 1700
+Clasificador 1 envió paquete 246 a cola NORMAL
+Clasificador 2 envió paquete 240 a cola NORMAL
+Despachador 3 despachó paquete 238 - peso 8 - prioridad NORMAL - costo 800
+Escáner 2 procesó paquete 245
+Clasificador 1 envió paquete 245 a cola NORMAL
+Despachador 3 despachó paquete 237 - peso 9 - prioridad NORMAL - costo 900
+Escáner 2 procesó paquete 250
+Receptor 3 generó paquete 260 con peso 8
+Despachador 1 despachó paquete 246 - peso 5 - prioridad NORMAL - costo 500
+Receptor 2 generó paquete 259 con peso 5
+Clasificador 2 envió paquete 250 a cola PRIORIDAD
+Receptor 4 generó paquete 258 con peso 2
+Escáner 3 procesó paquete 249
+Clasificador 3 envió paquete 243 a cola NORMAL
+Clasificador 4 envió paquete 244 a cola PRIORIDAD
+Receptor 1 generó paquete 261 con peso 9
+Escáner 2 procesó paquete 253
+Clasificador 2 envió paquete 253 a cola PRIORIDAD
+Despachador 2 despachó paquete 250 - peso 14 - prioridad ALTA - costo 1400
+Despachador 2 despachó paquete 244 - peso 18 - prioridad ALTA - costo 1800
+Receptor 3 generó paquete 262 con peso 7
+Escáner 1 procesó paquete 248
+Despachador 3 despachó paquete 253 - peso 12 - prioridad ALTA - costo 1200
+Despachador 1 despachó paquete 240 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 1 envió paquete 249 a cola NORMAL
+Receptor 2 generó paquete 263 con peso 11
+Escáner 4 procesó paquete 247
+Escáner 3 procesó paquete 252
+Receptor 4 generó paquete 264 con peso 10
+Clasificador 4 envió paquete 247 a cola NORMAL
+Receptor 3 generó paquete 266 con peso 1
+Receptor 1 generó paquete 265 con peso 18
+Clasificador 2 envió paquete 252 a cola NORMAL
+Escáner 2 procesó paquete 251
+Despachador 2 despachó paquete 245 - peso 8 - prioridad NORMAL - costo 800
+Despachador 1 despachó paquete 243 - peso 8 - prioridad NORMAL - costo 800
+Receptor 4 generó paquete 268 con peso 4
+Escáner 3 procesó paquete 256
+Despachador 3 despachó paquete 249 - peso 2 - prioridad NORMAL - costo 200
+Clasificador 1 envió paquete 251 a cola NORMAL
+Clasificador 3 envió paquete 248 a cola NORMAL
+Receptor 2 generó paquete 267 con peso 6
+Clasificador 4 envió paquete 256 a cola PRIORIDAD
+Receptor 3 generó paquete 269 con peso 19
+Escáner 2 procesó paquete 257
+Escáner 1 procesó paquete 254
+Despachador 1 despachó paquete 256 - peso 14 - prioridad ALTA - costo 1400
+Despachador 2 despachó paquete 247 - peso 10 - prioridad NORMAL - costo 1000
+Receptor 1 generó paquete 270 con peso 10
+Escáner 1 procesó paquete 258
+Escáner 4 procesó paquete 255
+Despachador 3 despachó paquete 252 - peso 3 - prioridad NORMAL - costo 300
+Clasificador 1 envió paquete 254 a cola PRIORIDAD
+Clasificador 2 envió paquete 257 a cola NORMAL
+Clasificador 4 envió paquete 255 a cola NORMAL
+Clasificador 3 envió paquete 258 a cola NORMAL
+Escáner 2 procesó paquete 259
+Despachador 3 despachó paquete 254 - peso 14 - prioridad ALTA - costo 1400
+Receptor 2 generó paquete 272 con peso 11
+Receptor 4 generó paquete 271 con peso 15
+Receptor 3 generó paquete 273 con peso 19
+Despachador 2 despachó paquete 251 - peso 6 - prioridad NORMAL - costo 600
+Escáner 3 procesó paquete 260
+Despachador 1 despachó paquete 248 - peso 5 - prioridad NORMAL - costo 500
+Clasificador 2 envió paquete 260 a cola NORMAL
+Clasificador 1 envió paquete 259 a cola NORMAL
+Despachador 3 despachó paquete 257 - peso 4 - prioridad NORMAL - costo 400
+Receptor 2 generó paquete 275 con peso 2
+Receptor 1 generó paquete 274 con peso 13
+Despachador 3 despachó paquete 255 - peso 3 - prioridad NORMAL - costo 300
+Escáner 2 procesó paquete 263
+Receptor 4 generó paquete 276 con peso 17
+Escáner 4 procesó paquete 262
+Escáner 3 procesó paquete 264
+Receptor 3 generó paquete 277 con peso 10
+Despachador 2 despachó paquete 258 - peso 2 - prioridad NORMAL - costo 200
+Despachador 1 despachó paquete 260 - peso 8 - prioridad NORMAL - costo 800
+Clasificador 3 envió paquete 262 a cola NORMAL
+Escáner 1 procesó paquete 261
+Escáner 1 procesó paquete 267
+Clasificador 2 envió paquete 264 a cola NORMAL
+Escáner 2 procesó paquete 266
+Clasificador 2 envió paquete 266 a cola NORMAL
+Receptor 4 generó paquete 280 con peso 9
+Clasificador 1 envió paquete 261 a cola NORMAL
+Receptor 3 generó paquete 281 con peso 10
+Receptor 2 generó paquete 278 con peso 15
+Receptor 1 generó paquete 279 con peso 6
+Despachador 3 despachó paquete 259 - peso 5 - prioridad NORMAL - costo 500
+Escáner 4 procesó paquete 265
+Clasificador 2 envió paquete 265 a cola PRIORIDAD
+Escáner 4 procesó paquete 272
+Escáner 1 procesó paquete 269
+Escáner 3 procesó paquete 268
+Escáner 3 procesó paquete 275
+Escáner 4 procesó paquete 271
+Despachador 1 despachó paquete 265 - peso 18 - prioridad ALTA - costo 1800
+Despachador 2 despachó paquete 262 - peso 7 - prioridad NORMAL - costo 700
+Clasificador 4 envió paquete 263 a cola PRIORIDAD
+Clasificador 3 envió paquete 267 a cola NORMAL
+Clasificador 3 envió paquete 275 a cola NORMAL
+Clasificador 4 envió paquete 268 a cola NORMAL
+Receptor 4 generó paquete 282 con peso 18
+Clasificador 2 envió paquete 269 a cola PRIORIDAD
+Despachador 3 despachó paquete 263 - peso 11 - prioridad ALTA - costo 1100
+Escáner 2 procesó paquete 270
+Clasificador 1 envió paquete 272 a cola PRIORIDAD
+Receptor 2 generó paquete 284 con peso 5
+Despachador 3 despachó paquete 269 - peso 19 - prioridad ALTA - costo 1900
+Receptor 3 generó paquete 283 con peso 13
+Despachador 3 despachó paquete 272 - peso 11 - prioridad ALTA - costo 1100
+Despachador 1 despachó paquete 264 - peso 10 - prioridad NORMAL - costo 1000
+Receptor 1 generó paquete 285 con peso 10
+Despachador 2 despachó paquete 266 - peso 1 - prioridad NORMAL - costo 100
+Despachador 3 despachó paquete 261 - peso 9 - prioridad NORMAL - costo 900
+Clasificador 3 envió paquete 271 a cola PRIORIDAD
+Escáner 4 procesó paquete 276
+Clasificador 2 envió paquete 276 a cola PRIORIDAD
+Escáner 4 procesó paquete 280
+Receptor 4 generó paquete 286 con peso 19
+Despachador 2 despachó paquete 271 - peso 15 - prioridad ALTA - costo 1500
+Escáner 1 procesó paquete 273
+Escáner 4 procesó paquete 281
+Clasificador 3 envió paquete 273 a cola PRIORIDAD
+Despachador 1 despachó paquete 276 - peso 17 - prioridad ALTA - costo 1700
+Receptor 2 generó paquete 287 con peso 20
+Escáner 3 procesó paquete 274
+Clasificador 2 envió paquete 281 a cola NORMAL
+Clasificador 4 envió paquete 270 a cola NORMAL
+Escáner 4 procesó paquete 279
+Receptor 3 generó paquete 288 con peso 10
+Escáner 1 procesó paquete 278
+Despachador 1 despachó paquete 273 - peso 19 - prioridad ALTA - costo 1900
+Despachador 2 despachó paquete 267 - peso 6 - prioridad NORMAL - costo 600
+Receptor 1 generó paquete 289 con peso 17
+Despachador 1 despachó paquete 275 - peso 2 - prioridad NORMAL - costo 200
+Clasificador 1 envió paquete 280 a cola NORMAL
+Despachador 3 despachó paquete 268 - peso 4 - prioridad NORMAL - costo 400
+Receptor 4 generó paquete 290 con peso 20
+Escáner 2 procesó paquete 277
+Receptor 2 generó paquete 291 con peso 2
+Clasificador 2 envió paquete 279 a cola NORMAL
+Escáner 4 procesó paquete 284
+Despachador 2 despachó paquete 281 - peso 10 - prioridad NORMAL - costo 1000
+Receptor 1 generó paquete 293 con peso 6
+Clasificador 1 envió paquete 277 a cola NORMAL
+Clasificador 3 envió paquete 274 a cola PRIORIDAD
+Escáner 3 procesó paquete 282
+Receptor 3 generó paquete 292 con peso 4
+Despachador 3 despachó paquete 274 - peso 13 - prioridad ALTA - costo 1300
+Clasificador 4 envió paquete 278 a cola PRIORIDAD
+Clasificador 2 envió paquete 284 a cola NORMAL
+Despachador 1 despachó paquete 278 - peso 15 - prioridad ALTA - costo 1500
+Despachador 2 despachó paquete 270 - peso 10 - prioridad NORMAL - costo 1000
+Clasificador 1 envió paquete 282 a cola PRIORIDAD
+Receptor 2 generó paquete 295 con peso 18
+Receptor 4 generó paquete 294 con peso 1
+Despachador 3 despachó paquete 282 - peso 18 - prioridad ALTA - costo 1800
+Receptor 1 generó paquete 296 con peso 14
+Escáner 4 procesó paquete 286
+Escáner 1 procesó paquete 283
+Escáner 1 procesó paquete 289
+Escáner 2 procesó paquete 285
+Clasificador 1 envió paquete 285 a cola NORMAL
+Escáner 3 procesó paquete 287
+Receptor 3 generó paquete 297 con peso 6
+Clasificador 4 envió paquete 283 a cola PRIORIDAD
+Despachador 1 despachó paquete 283 - peso 13 - prioridad ALTA - costo 1300
+Receptor 2 generó paquete 298 con peso 15
+Despachador 1 despachó paquete 280 - peso 9 - prioridad NORMAL - costo 900
+Clasificador 3 envió paquete 286 a cola PRIORIDAD
+Despachador 2 despachó paquete 286 - peso 19 - prioridad ALTA - costo 1900
+Escáner 1 procesó paquete 290
+Despachador 1 despachó paquete 279 - peso 6 - prioridad NORMAL - costo 600
+Receptor 4 generó paquete 299 con peso 14
+Escáner 1 procesó paquete 292
+Despachador 3 despachó paquete 277 - peso 10 - prioridad NORMAL - costo 1000
+Clasificador 4 envió paquete 290 a cola PRIORIDAD
+Receptor 1 generó paquete 300 con peso 9
+Escáner 2 procesó paquete 291
+Escáner 4 procesó paquete 288
+Escáner 1 procesó paquete 295
+Despachador 2 despachó paquete 290 - peso 20 - prioridad ALTA - costo 2000
+Clasificador 2 envió paquete 289 a cola PRIORIDAD
+Clasificador 1 envió paquete 287 a cola PRIORIDAD
+Escáner 1 procesó paquete 297
+Clasificador 2 envió paquete 288 a cola NORMAL
+Despachador 1 despachó paquete 289 - peso 17 - prioridad ALTA - costo 1700
+Escáner 1 procesó paquete 298
+Despachador 2 despachó paquete 287 - peso 20 - prioridad ALTA - costo 2000
+Clasificador 2 envió paquete 297 a cola NORMAL
+Clasificador 3 envió paquete 292 a cola NORMAL
+Clasificador 4 envió paquete 291 a cola NORMAL
+Escáner 1 procesó paquete 299
+Escáner 1 procesó paquete 300
+Clasificador 3 envió paquete 299 a cola PRIORIDAD
+Escáner 3 procesó paquete 293
+Despachador 3 despachó paquete 284 - peso 5 - prioridad NORMAL - costo 500
+Clasificador 3 envió paquete 293 a cola NORMAL
+Clasificador 1 envió paquete 295 a cola PRIORIDAD
+Escáner 4 procesó paquete 296
+Clasificador 2 envió paquete 298 a cola PRIORIDAD
+Despachador 3 despachó paquete 299 - peso 14 - prioridad ALTA - costo 1400
+Clasificador 4 envió paquete 300 a cola NORMAL
+Despachador 1 despachó paquete 295 - peso 18 - prioridad ALTA - costo 1800
+Clasificador 3 envió paquete 296 a cola PRIORIDAD
+Despachador 2 despachó paquete 298 - peso 15 - prioridad ALTA - costo 1500
+Escáner 2 procesó paquete 294
+Despachador 1 despachó paquete 285 - peso 10 - prioridad NORMAL - costo 1000
+Despachador 3 despachó paquete 296 - peso 14 - prioridad ALTA - costo 1400
+Despachador 1 despachó paquete 288 - peso 10 - prioridad NORMAL - costo 1000
+Despachador 2 despachó paquete 297 - peso 6 - prioridad NORMAL - costo 600
+Clasificador 1 envió paquete 294 a cola NORMAL
+Despachador 2 despachó paquete 292 - peso 4 - prioridad NORMAL - costo 400
+Despachador 1 despachó paquete 291 - peso 2 - prioridad NORMAL - costo 200
+Despachador 3 despachó paquete 293 - peso 6 - prioridad NORMAL - costo 600
+Despachador 2 despachó paquete 300 - peso 9 - prioridad NORMAL - costo 900
+Despachador 1 despachó paquete 294 - peso 1 - prioridad NORMAL - costo 100
+Se despacharon los 300 paquetes.
