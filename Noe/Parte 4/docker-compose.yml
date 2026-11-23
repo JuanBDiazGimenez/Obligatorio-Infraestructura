@@ -1,0 +1,30 @@
+# Un servicio "puerto" y cuatro servicios "barco": cada uno es un contenedor (microservicio) independiente.
+# Todos usan la misma imagen; cambia el comando. En la red de compose, "puerto" es el nombre DNS del servicio.
+x-ada: &ada
+  build: .
+  image: atracadero-ada
+
+services:
+  puerto:
+    <<: *ada
+    command: ["puerto"]
+
+  barco1:
+    <<: *ada
+    command: ["barco", "1", "puerto"]
+    depends_on: [puerto]
+
+  barco2:
+    <<: *ada
+    command: ["barco", "2", "puerto"]
+    depends_on: [puerto]
+
+  barco3:
+    <<: *ada
+    command: ["barco", "3", "puerto"]
+    depends_on: [puerto]
+
+  barco4:
+    <<: *ada
+    command: ["barco", "4", "puerto"]
+    depends_on: [puerto]

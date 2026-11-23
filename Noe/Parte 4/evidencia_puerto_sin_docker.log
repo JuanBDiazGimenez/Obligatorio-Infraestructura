@@ -1,0 +1,70 @@
+[puerto] atracadero libre, escuchando en el puerto 5000
+[puerto] Barco 3 solicita acceso.
+[puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+[puerto] Barco 3 libera el atracadero.
+[puerto] Barco 1 solicita acceso.
+[puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+[puerto] Barco 2 solicita acceso.
+[puerto] Barco 4 solicita acceso.
+[puerto] Barco 1 libera el atracadero.
+[puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+[puerto] Barco 3 solicita acceso.
+[puerto] Barco 1 solicita acceso.
+[puerto] Barco 2 libera el atracadero.
+[puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+[puerto] Barco 4 libera el atracadero.
+[puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+[puerto] Barco 2 solicita acceso.
+[puerto] Barco 3 libera el atracadero.
+[puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+[puerto] Barco 3 solicita acceso.
+[puerto] Barco 4 solicita acceso.
+[puerto] Barco 1 libera el atracadero.
+[puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+[puerto] Barco 1 solicita acceso.
+[puerto] Barco 2 libera el atracadero.
+[puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+[puerto] Barco 2 solicita acceso.
+[puerto] Barco 3 libera el atracadero.
+[puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+[puerto] Barco 4 libera el atracadero.
+[puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+[puerto] Barco 1 libera el atracadero.
+[puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+[puerto] Barco 4 solicita acceso.
+[puerto] Barco 3 solicita acceso.
+[puerto] Barco 1 solicita acceso.
+[puerto] Barco 2 libera el atracadero.
+[puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+[puerto] Barco 4 libera el atracadero.
+[puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+[puerto] Barco 2 solicita acceso.
+[puerto] Barco 4 solicita acceso.
+[puerto] Barco 3 libera el atracadero.
+[puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+[puerto] Barco 1 libera el atracadero.
+[puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+[puerto] Barco 3 solicita acceso.
+[puerto] Barco 1 solicita acceso.
+[puerto] Barco 2 libera el atracadero.
+[puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+[puerto] Barco 4 libera el atracadero.
+[puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+[puerto] Barco 2 solicita acceso.
+[puerto] Barco 3 libera el atracadero.
+[puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+[puerto] Barco 4 solicita acceso.
+[puerto] Barco 1 libera el atracadero.
+[puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+[puerto] Barco 3 solicita acceso.
+[puerto] Barco 2 libera el atracadero.
+[puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+[puerto] Barco 1 solicita acceso.
+[puerto] Barco 2 solicita acceso.
+[puerto] Barco 4 libera el atracadero.
+[puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+[puerto] conexion perdida: atracadero liberado.
+[puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+[puerto] conexion perdida: atracadero liberado.
+[puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+[puerto] conexion perdida: atracadero liberado.

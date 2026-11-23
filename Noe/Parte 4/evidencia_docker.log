@@ -1,0 +1,179 @@
+barco3-1  | 2026-11-21T22:05:40.268248697Z Barco 3 navegando...
+barco3-1  | 2026-11-21T22:05:42.044110190Z Barco 3 solicita acceso al atracadero.
+barco3-1  | 2026-11-21T22:05:42.045858680Z Barco 3 recibió autorización: INGRESA al atracadero.
+barco3-1  | 2026-11-21T22:05:43.313947841Z Barco 3 abandona el atracadero.
+barco3-1  | 2026-11-21T22:05:43.313968042Z Barco 3 vuelve a navegar...
+barco3-1  | 2026-11-21T22:05:43.313970442Z Barco 3 navegando...
+barco3-1  | 2026-11-21T22:05:47.730662392Z Barco 3 solicita acceso al atracadero.
+barco3-1  | 2026-11-21T22:05:51.439955006Z Barco 3 recibió autorización: INGRESA al atracadero.
+barco3-1  | 2026-11-21T22:05:52.900324924Z Barco 3 abandona el atracadero.
+barco3-1  | 2026-11-21T22:05:52.900352026Z Barco 3 vuelve a navegar...
+barco3-1  | 2026-11-21T22:05:52.900356626Z Barco 3 navegando...
+barco3-1  | 2026-11-21T22:05:55.191893431Z Barco 3 solicita acceso al atracadero.
+barco3-1  | 2026-11-21T22:05:57.317968122Z Barco 3 recibió autorización: INGRESA al atracadero.
+barco3-1  | 2026-11-21T22:05:58.878970492Z Barco 3 abandona el atracadero.
+barco3-1  | 2026-11-21T22:05:58.878995692Z Barco 3 vuelve a navegar...
+barco3-1  | 2026-11-21T22:05:58.878998992Z Barco 3 navegando...
+barco3-1  | 2026-11-21T22:06:02.901191937Z Barco 3 solicita acceso al atracadero.
+barco3-1  | 2026-11-21T22:06:07.836323599Z Barco 3 recibió autorización: INGRESA al atracadero.
+barco3-1  | 2026-11-21T22:06:09.621420171Z Barco 3 abandona el atracadero.
+barco3-1  | 2026-11-21T22:06:09.621471773Z Barco 3 vuelve a navegar...
+barco3-1  | 2026-11-21T22:06:09.621477473Z Barco 3 navegando...
+barco3-1  | 2026-11-21T22:06:12.514739751Z Barco 3 solicita acceso al atracadero.
+barco3-1  | 2026-11-21T22:06:15.843382156Z Barco 3 recibió autorización: INGRESA al atracadero.
+barco3-1  | 2026-11-21T22:06:17.562276054Z Barco 3 abandona el atracadero.
+barco3-1  | 2026-11-21T22:06:17.562303054Z Barco 3 vuelve a navegar...
+barco3-1  | 2026-11-21T22:06:17.562307154Z Barco 3 navegando...
+barco3-1  | 2026-11-21T22:06:19.510638310Z Barco 3 solicita acceso al atracadero.
+barco3-1  | 2026-11-21T22:06:24.101703410Z Barco 3 recibió autorización: INGRESA al atracadero.
+barco3-1  | 2026-11-21T22:06:25.611260345Z Barco 3 abandona el atracadero.
+barco3-1  | 2026-11-21T22:06:25.611311348Z Barco 3 vuelve a navegar...
+barco3-1  | 2026-11-21T22:06:25.611314648Z Barco 3 navegando...
+barco2-1  | 2026-11-21T22:05:40.490016410Z Barco 2 navegando...
+barco2-1  | 2026-11-21T22:05:44.362339695Z Barco 2 solicita acceso al atracadero.
+barco2-1  | 2026-11-21T22:05:46.944923857Z Barco 2 recibió autorización: INGRESA al atracadero.
+barco2-1  | 2026-11-21T22:05:48.537761693Z Barco 2 abandona el atracadero.
+barco2-1  | 2026-11-21T22:05:48.537783092Z Barco 2 vuelve a navegar...
+barco2-1  | 2026-11-21T22:05:48.537785592Z Barco 2 navegando...
+barco2-1  | 2026-11-21T22:05:51.590129150Z Barco 2 solicita acceso al atracadero.
+barco2-1  | 2026-11-21T22:05:55.834171424Z Barco 2 recibió autorización: INGRESA al atracadero.
+barco2-1  | 2026-11-21T22:05:57.317490416Z Barco 2 abandona el atracadero.
+barco2-1  | 2026-11-21T22:05:57.317518716Z Barco 2 vuelve a navegar...
+barco2-1  | 2026-11-21T22:05:57.317523116Z Barco 2 navegando...
+puerto-1  | 2026-11-21T22:05:39.928266900Z [puerto] atracadero libre, escuchando en el puerto 5000
+puerto-1  | 2026-11-21T22:05:42.045813477Z [puerto] Barco 3 solicita acceso.
+puerto-1  | 2026-11-21T22:05:42.045847679Z [puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:43.314026645Z [puerto] Barco 3 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:43.946853212Z [puerto] Barco 1 solicita acceso.
+puerto-1  | 2026-11-21T22:05:43.946875914Z [puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:44.363447252Z [puerto] Barco 2 solicita acceso.
+puerto-1  | 2026-11-21T22:05:45.613873372Z [puerto] Barco 4 solicita acceso.
+puerto-1  | 2026-11-21T22:05:46.944587272Z [puerto] Barco 1 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:46.944632070Z [puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:47.731514055Z [puerto] Barco 3 solicita acceso.
+puerto-1  | 2026-11-21T22:05:48.376141061Z [puerto] Barco 1 solicita acceso.
+puerto-1  | 2026-11-21T22:05:48.537884887Z [puerto] Barco 2 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:48.537897387Z [puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:51.439629691Z [puerto] Barco 4 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:51.439643292Z [puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:51.591841127Z [puerto] Barco 2 solicita acceso.
+puerto-1  | 2026-11-21T22:05:52.900492432Z [puerto] Barco 3 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:52.900511033Z [puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:55.192975244Z [puerto] Barco 3 solicita acceso.
+puerto-1  | 2026-11-21T22:05:55.534849152Z [puerto] Barco 4 solicita acceso.
+puerto-1  | 2026-11-21T22:05:55.833900721Z [puerto] Barco 1 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:55.833912821Z [puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:56.866095527Z [puerto] Barco 1 solicita acceso.
+puerto-1  | 2026-11-21T22:05:57.317739619Z [puerto] Barco 2 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:57.317758619Z [puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:05:58.706282516Z [puerto] Barco 2 solicita acceso.
+barco2-1  | 2026-11-21T22:05:58.705333904Z Barco 2 solicita acceso al atracadero.
+barco2-1  | 2026-11-21T22:06:02.031554863Z Barco 2 recibió autorización: INGRESA al atracadero.
+barco2-1  | 2026-11-21T22:06:04.979455319Z Barco 2 abandona el atracadero.
+barco2-1  | 2026-11-21T22:06:04.979486424Z Barco 2 vuelve a navegar...
+barco2-1  | 2026-11-21T22:06:04.979491324Z Barco 2 navegando...
+barco2-1  | 2026-11-21T22:06:08.850534286Z Barco 2 solicita acceso al atracadero.
+barco2-1  | 2026-11-21T22:06:10.747734833Z Barco 2 recibió autorización: INGRESA al atracadero.
+barco2-1  | 2026-11-21T22:06:13.233076784Z Barco 2 abandona el atracadero.
+barco2-1  | 2026-11-21T22:06:13.233102686Z Barco 2 vuelve a navegar...
+barco2-1  | 2026-11-21T22:06:13.233106786Z Barco 2 navegando...
+barco2-1  | 2026-11-21T22:06:17.074020861Z Barco 2 solicita acceso al atracadero.
+barco2-1  | 2026-11-21T22:06:19.181794088Z Barco 2 recibió autorización: INGRESA al atracadero.
+barco2-1  | 2026-11-21T22:06:21.502785929Z Barco 2 abandona el atracadero.
+barco2-1  | 2026-11-21T22:06:21.502848529Z Barco 2 vuelve a navegar...
+barco2-1  | 2026-11-21T22:06:21.502853529Z Barco 2 navegando...
+barco2-1  | 2026-11-21T22:06:23.833508119Z Barco 2 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:05:40.111047107Z Barco 1 navegando...
+barco1-1  | 2026-11-21T22:05:43.945507143Z Barco 1 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:05:43.946892014Z Barco 1 recibió autorización: INGRESA al atracadero.
+barco1-1  | 2026-11-21T22:05:46.944378881Z Barco 1 abandona el atracadero.
+barco1-1  | 2026-11-21T22:05:46.944431479Z Barco 1 vuelve a navegar...
+barco1-1  | 2026-11-21T22:05:46.944435579Z Barco 1 navegando...
+barco1-1  | 2026-11-21T22:05:48.375004611Z Barco 1 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:05:52.900806846Z Barco 1 recibió autorización: INGRESA al atracadero.
+barco1-1  | 2026-11-21T22:05:55.833691218Z Barco 1 abandona el atracadero.
+barco1-1  | 2026-11-21T22:05:55.833792719Z Barco 1 vuelve a navegar...
+barco1-1  | 2026-11-21T22:05:55.833806319Z Barco 1 navegando...
+barco1-1  | 2026-11-21T22:05:56.865278117Z Barco 1 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:06:00.466643799Z Barco 1 recibió autorización: INGRESA al atracadero.
+barco1-1  | 2026-11-21T22:06:02.031245920Z Barco 1 abandona el atracadero.
+barco1-1  | 2026-11-21T22:06:02.031271323Z Barco 1 vuelve a navegar...
+barco1-1  | 2026-11-21T22:06:02.031275524Z Barco 1 navegando...
+barco1-1  | 2026-11-21T22:06:04.334020485Z Barco 1 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:06:09.621904394Z Barco 1 recibió autorización: INGRESA al atracadero.
+barco1-1  | 2026-11-21T22:06:10.747339415Z Barco 1 abandona el atracadero.
+barco1-1  | 2026-11-21T22:06:10.747364916Z Barco 1 vuelve a navegar...
+barco1-1  | 2026-11-21T22:06:10.747369016Z Barco 1 navegando...
+barco1-1  | 2026-11-21T22:06:12.894575647Z Barco 1 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:06:17.562851854Z Barco 1 recibió autorización: INGRESA al atracadero.
+barco1-1  | 2026-11-21T22:06:19.181266088Z Barco 1 abandona el atracadero.
+barco1-1  | 2026-11-21T22:06:19.181292088Z Barco 1 vuelve a navegar...
+barco1-1  | 2026-11-21T22:06:19.181296188Z Barco 1 navegando...
+barco1-1  | 2026-11-21T22:06:22.366480212Z Barco 1 solicita acceso al atracadero.
+barco1-1  | 2026-11-21T22:06:25.611610662Z Barco 1 recibió autorización: INGRESA al atracadero.
+puerto-1  | 2026-11-21T22:05:58.879110494Z [puerto] Barco 3 libera el atracadero.
+puerto-1  | 2026-11-21T22:05:58.879123194Z [puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:00.466372795Z [puerto] Barco 4 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:00.466394195Z [puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:02.031442347Z [puerto] Barco 1 libera el atracadero.
+barco4-1  | 2026-11-21T22:05:40.678439307Z Barco 4 navegando...
+barco4-1  | 2026-11-21T22:05:45.612814718Z Barco 4 solicita acceso al atracadero.
+barco4-1  | 2026-11-21T22:05:48.538000882Z Barco 4 recibió autorización: INGRESA al atracadero.
+barco4-1  | 2026-11-21T22:05:51.439212373Z Barco 4 abandona el atracadero.
+barco4-1  | 2026-11-21T22:05:51.439326878Z Barco 4 vuelve a navegar...
+puerto-1  | 2026-11-21T22:06:02.031491554Z [puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+barco4-1  | 2026-11-21T22:05:51.439332278Z Barco 4 navegando...
+barco4-1  | 2026-11-21T22:05:55.533965441Z Barco 4 solicita acceso al atracadero.
+barco4-1  | 2026-11-21T22:05:58.879308396Z Barco 4 recibió autorización: INGRESA al atracadero.
+barco4-1  | 2026-11-21T22:06:00.466152692Z Barco 4 abandona el atracadero.
+barco4-1  | 2026-11-21T22:06:00.466177293Z Barco 4 vuelve a navegar...
+barco4-1  | 2026-11-21T22:06:00.466181093Z Barco 4 navegando...
+barco4-1  | 2026-11-21T22:06:02.453004487Z Barco 4 solicita acceso al atracadero.
+barco4-1  | 2026-11-21T22:06:04.979811069Z Barco 4 recibió autorización: INGRESA al atracadero.
+barco4-1  | 2026-11-21T22:06:07.835905279Z Barco 4 abandona el atracadero.
+puerto-1  | 2026-11-21T22:06:02.454040532Z [puerto] Barco 4 solicita acceso.
+puerto-1  | 2026-11-21T22:06:02.902206278Z [puerto] Barco 3 solicita acceso.
+puerto-1  | 2026-11-21T22:06:04.334831698Z [puerto] Barco 1 solicita acceso.
+puerto-1  | 2026-11-21T22:06:04.979658348Z [puerto] Barco 2 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:04.979688852Z [puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:07.836098288Z [puerto] Barco 4 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:07.836113189Z [puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:08.851311523Z [puerto] Barco 2 solicita acceso.
+puerto-1  | 2026-11-21T22:06:09.265702061Z [puerto] Barco 4 solicita acceso.
+puerto-1  | 2026-11-21T22:06:09.621704984Z [puerto] Barco 3 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:09.622490921Z [puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:10.747625528Z [puerto] Barco 1 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:10.747645429Z [puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:12.515613892Z [puerto] Barco 3 solicita acceso.
+puerto-1  | 2026-11-21T22:06:12.895431587Z [puerto] Barco 1 solicita acceso.
+puerto-1  | 2026-11-21T22:06:13.233346697Z [puerto] Barco 2 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:13.233367398Z [puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:15.843144644Z [puerto] Barco 4 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:15.843161145Z [puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:17.074904903Z [puerto] Barco 2 solicita acceso.
+puerto-1  | 2026-11-21T22:06:17.562560054Z [puerto] Barco 3 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:17.562585754Z [puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:18.542247928Z [puerto] Barco 4 solicita acceso.
+puerto-1  | 2026-11-21T22:06:19.181532388Z [puerto] Barco 1 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:19.181553788Z [puerto] AUTORIZA a Barco 2 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:19.511464210Z [puerto] Barco 3 solicita acceso.
+puerto-1  | 2026-11-21T22:06:21.503100929Z [puerto] Barco 2 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:21.503140329Z [puerto] AUTORIZA a Barco 4 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:22.367744811Z [puerto] Barco 1 solicita acceso.
+puerto-1  | 2026-11-21T22:06:23.834575466Z [puerto] Barco 2 solicita acceso.
+puerto-1  | 2026-11-21T22:06:24.101414697Z [puerto] Barco 4 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:24.101434898Z [puerto] AUTORIZA a Barco 3 (barcos en el atracadero: 1)
+puerto-1  | 2026-11-21T22:06:25.611421453Z [puerto] Barco 3 libera el atracadero.
+puerto-1  | 2026-11-21T22:06:25.611433553Z [puerto] AUTORIZA a Barco 1 (barcos en el atracadero: 1)
+barco4-1  | 2026-11-21T22:06:07.835927880Z Barco 4 vuelve a navegar...
+barco4-1  | 2026-11-21T22:06:07.835930380Z Barco 4 navegando...
+barco4-1  | 2026-11-21T22:06:09.264889122Z Barco 4 solicita acceso al atracadero.
+barco4-1  | 2026-11-21T22:06:13.233522305Z Barco 4 recibió autorización: INGRESA al atracadero.
+barco4-1  | 2026-11-21T22:06:15.842939835Z Barco 4 abandona el atracadero.
+barco4-1  | 2026-11-21T22:06:15.842976036Z Barco 4 vuelve a navegar...
+barco4-1  | 2026-11-21T22:06:15.842980437Z Barco 4 navegando...
+barco4-1  | 2026-11-21T22:06:18.541208328Z Barco 4 solicita acceso al atracadero.
+barco4-1  | 2026-11-21T22:06:21.503259929Z Barco 4 recibió autorización: INGRESA al atracadero.
+barco4-1  | 2026-11-21T22:06:24.101276791Z Barco 4 abandona el atracadero.
+barco4-1  | 2026-11-21T22:06:24.101305792Z Barco 4 vuelve a navegar...
+barco4-1  | 2026-11-21T22:06:24.101313392Z Barco 4 navegando...
