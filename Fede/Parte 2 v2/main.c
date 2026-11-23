@@ -51,22 +51,6 @@ int prioritarios_consecutivos;
 int asignados;
 int despachados;
 
-void esperar(sem_t *semaforo) {
-    sem_wait(semaforo);
-}
-
-void avisar(sem_t *semaforo) {
-    sem_post(semaforo);
-}
-
-void iniciar_semaforo(sem_t *semaforo, unsigned int valor) {
-    sem_init(semaforo, 0, valor);
-}
-
-void destruir_semaforo(sem_t *semaforo) {
-    sem_destroy(semaforo);
-}
-
 int aleatorio(int minimo, int maximo) {
     return minimo + rand() % (maximo - minimo + 1);
 }
@@ -100,56 +84,56 @@ Paquete extraer(Cola *cola) {
 
 void iniciar_zona(Zona *zona, const char *nombre) {
     iniciar_cola(&zona->cola, CAPACIDAD_ZONA, nombre);
-    iniciar_semaforo(&zona->espacios, CAPACIDAD_ZONA);
-    iniciar_semaforo(&zona->elementos, 0);
-    iniciar_semaforo(&zona->mutex, 1);
+    sem_init(&zona->espacios, 0, CAPACIDAD_ZONA);
+    sem_init(&zona->elementos, 0, 0);
+    sem_init(&zona->mutex, 0, 1);
 }
 
 void depositar(Zona *zona, Paquete paquete) {
-    esperar(&zona->espacios);
-    esperar(&zona->mutex);
+    sem_wait(&zona->espacios);
+    sem_wait(&zona->mutex);
     insertar(&zona->cola, paquete);
-    avisar(&zona->elementos);
-    avisar(&zona->mutex);
+    sem_post(&zona->elementos);
+    sem_post(&zona->mutex);
 }
 
 int retirar(Zona *zona, Paquete *paquete) {
-    esperar(&zona->elementos);
-    esperar(&zona->mutex);
+    sem_wait(&zona->elementos);
+    sem_wait(&zona->mutex);
     if (zona->cerrada && zona->cola.cantidad == 0) {
-        avisar(&zona->mutex);
+        sem_post(&zona->mutex);
         return 0;
     }
     *paquete = extraer(&zona->cola);
-    avisar(&zona->mutex);
-    avisar(&zona->espacios);
+    sem_post(&zona->mutex);
+    sem_post(&zona->espacios);
     return 1;
 }
 
 /* main cierra una zona solo después del join de TODOS sus productores. */
 void cerrar_zona(Zona *zona, int consumidores) {
-    esperar(&zona->mutex);
+    sem_wait(&zona->mutex);
     zona->cerrada = 1;
-    avisar(&zona->mutex);
-    for (int i = 0; i < consumidores; i++) avisar(&zona->elementos);
+    sem_post(&zona->mutex);
+    for (int i = 0; i < consumidores; i++) sem_post(&zona->elementos);
 }
 
 void destruir_zona(Zona *zona) {
-    destruir_semaforo(&zona->espacios);
-    destruir_semaforo(&zona->elementos);
-    destruir_semaforo(&zona->mutex);
+    sem_destroy(&zona->espacios);
+    sem_destroy(&zona->elementos);
+    sem_destroy(&zona->mutex);
 }
 
 void *receptor(void *argumento) {
     Trabajador *trabajador = argumento;
     while (1) {
-        esperar(&mutex_recepcion);
+        sem_wait(&mutex_recepcion);
         if (asignados == TOTAL_PAQUETES) {
-            avisar(&mutex_recepcion);
+            sem_post(&mutex_recepcion);
             return NULL;
         }
         int id = ++asignados;
-        avisar(&mutex_recepcion);
+        sem_post(&mutex_recepcion);
 
         demorar(1, 2);
         Paquete paquete;
@@ -183,22 +167,22 @@ void *clasificador(void *argumento) {
         demorar(0, 2);
         Cola *destino = paquete.prioridad ? &prioridad : &normal;
         sem_t *espacios = paquete.prioridad ? &espacios_prioridad : &espacios_normal;
-        esperar(espacios);
-        esperar(&mutex_finales);
+        sem_wait(espacios);
+        sem_wait(&mutex_finales);
         insertar(destino, paquete);
         printf("Clasificador %d envió paquete %d a cola %s\n",
                trabajador->id, paquete.id, destino->nombre);
-        avisar(&disponibles_finales);
-        avisar(&mutex_finales);
+        sem_post(&disponibles_finales);
+        sem_post(&mutex_finales);
     }
     return NULL;
 }
 
 int retirar_para_despacho(Paquete *paquete, int id_despachador) {
-    esperar(&disponibles_finales);
-    esperar(&mutex_finales);
+    sem_wait(&disponibles_finales);
+    sem_wait(&mutex_finales);
     if (finales_cerradas && prioridad.cantidad == 0 && normal.cantidad == 0) {
-        avisar(&mutex_finales);
+        sem_post(&mutex_finales);
         return 0;
     }
 
@@ -217,8 +201,8 @@ int retirar_para_despacho(Paquete *paquete, int id_despachador) {
     printf("Despachador %d inició despacho de paquete %d - prioridad %s - normales esperando al elegir %d - contador prioridad %d\n",
            id_despachador, paquete->id, paquete->prioridad ? "ALTA" : "NORMAL",
            normales_esperando, prioritarios_consecutivos);
-    avisar(&mutex_finales);
-    avisar(elegir_prioridad ? &espacios_prioridad : &espacios_normal);
+    sem_post(&mutex_finales);
+    sem_post(elegir_prioridad ? &espacios_prioridad : &espacios_normal);
     return 1;
 }
 
@@ -227,12 +211,12 @@ void *despachador(void *argumento) {
     Paquete paquete;
     while (retirar_para_despacho(&paquete, trabajador->id)) {
         demorar(0, 2);
-        esperar(&mutex_despachados);
+        sem_wait(&mutex_despachados);
         despachados++;
         printf("Despachador %d despachó paquete %d - peso %d - prioridad %s - costo %d\n",
                trabajador->id, paquete.id, paquete.peso,
                paquete.prioridad ? "ALTA" : "NORMAL", paquete.costo);
-        avisar(&mutex_despachados);
+        sem_post(&mutex_despachados);
     }
     return NULL;
 }
@@ -254,12 +238,12 @@ int main(void) {
     iniciar_zona(&zona2, "ZONA2");
     iniciar_cola(&prioridad, CAPACIDAD_PRIORIDAD, "PRIORIDAD");
     iniciar_cola(&normal, CAPACIDAD_NORMAL, "NORMAL");
-    iniciar_semaforo(&espacios_prioridad, CAPACIDAD_PRIORIDAD);
-    iniciar_semaforo(&espacios_normal, CAPACIDAD_NORMAL);
-    iniciar_semaforo(&disponibles_finales, 0);
-    iniciar_semaforo(&mutex_finales, 1);
-    iniciar_semaforo(&mutex_recepcion, 1);
-    iniciar_semaforo(&mutex_despachados, 1);
+    sem_init(&espacios_prioridad, 0, CAPACIDAD_PRIORIDAD);
+    sem_init(&espacios_normal, 0, CAPACIDAD_NORMAL);
+    sem_init(&disponibles_finales, 0, 0);
+    sem_init(&mutex_finales, 0, 1);
+    sem_init(&mutex_recepcion, 0, 1);
+    sem_init(&mutex_despachados, 0, 1);
 
     for (int i = 0; i < DESPACHADORES; i++) {
         datos_despachadores[i].id = i + 1;
@@ -286,20 +270,20 @@ int main(void) {
     esperar_grupo(escaneres, ESCANERES);
     cerrar_zona(&zona2, CLASIFICADORES);
     esperar_grupo(clasificadores, CLASIFICADORES);
-    esperar(&mutex_finales);
+    sem_wait(&mutex_finales);
     finales_cerradas = 1;
-    avisar(&mutex_finales);
-    for (int i = 0; i < DESPACHADORES; i++) avisar(&disponibles_finales);
+    sem_post(&mutex_finales);
+    for (int i = 0; i < DESPACHADORES; i++) sem_post(&disponibles_finales);
     esperar_grupo(despachadores, DESPACHADORES);
 
     destruir_zona(&zona1);
     destruir_zona(&zona2);
-    destruir_semaforo(&espacios_prioridad);
-    destruir_semaforo(&espacios_normal);
-    destruir_semaforo(&disponibles_finales);
-    destruir_semaforo(&mutex_finales);
-    destruir_semaforo(&mutex_recepcion);
-    destruir_semaforo(&mutex_despachados);
+    sem_destroy(&espacios_prioridad);
+    sem_destroy(&espacios_normal);
+    sem_destroy(&disponibles_finales);
+    sem_destroy(&mutex_finales);
+    sem_destroy(&mutex_recepcion);
+    sem_destroy(&mutex_despachados);
     printf("Finalizado: %d paquetes generados y %d despachados.\n", asignados, despachados);
     return 0;
 }

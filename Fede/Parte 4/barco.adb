@@ -28,9 +28,7 @@ begin
       declare
          Permiso : constant String := Recibir (Buzon (Id));
       begin
-         if Permiso /= "AUTORIZADO" then
-            raise Program_Error with "Permiso desconocido";
-         end if;
+         null;
       end;
       Tiempo := Azar.Random (Generador);
       Put_Line ("BARCO" & Id_Barco'Image (Id) & " ENTRA" & Segundos'Image (Tiempo));

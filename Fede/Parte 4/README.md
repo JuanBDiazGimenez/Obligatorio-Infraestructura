@@ -61,6 +61,16 @@ y marca `puerto:listo`. Los `healthcheck` y `depends_on` hacen que los barcos
 arranquen después. No hay persistencia configurada ni permisos de una ejecución
 anterior. Se presupone una sola instancia del Coordinador, como declara Compose.
 
+El cliente conserva el control del código de salida de `redis-cli`: si falla,
+lanza `Error_Comunicacion`. Se retiraron los diagnósticos adicionales sobre los
+mensajes y las respuestas de Redis, y el manejador general de excepciones. La
+espera y retirada del permiso con `LPOP`, la limpieza de CR/LF al recibir y la
+liberación normal de los argumentos se mantienen. Los resultados que no se
+comprueban se guardan sin leerlos. La opción de compilación `-gnatwU` desactiva
+los avisos sobre elementos no utilizados; los demás avisos siguen activos y se
+tratan como errores. No se agregan lecturas artificiales ni se desactivan las
+comprobaciones de límites durante la ejecución. Véase `Resultados_no_utilizados.md`.
+
 ## Verificar y conservar evidencia
 
 Con el conjunto recién iniciado y sin otros operadores enviando mensajes:

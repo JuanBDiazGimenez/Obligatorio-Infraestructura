@@ -6,11 +6,11 @@
 
 static void agregar_prueba(int id, int alta) {
     sem_t *espacios = alta ? &espacios_prioridad : &espacios_normal;
-    esperar(espacios);
-    esperar(&mutex_finales);
+    sem_wait(espacios);
+    sem_wait(&mutex_finales);
     insertar(alta ? &prioridad : &normal, (Paquete){.id = id, .prioridad = alta});
-    avisar(&disponibles_finales);
-    avisar(&mutex_finales);
+    sem_post(&disponibles_finales);
+    sem_post(&mutex_finales);
 }
 
 static void esperar_id(int id) {
@@ -22,10 +22,10 @@ static void esperar_id(int id) {
 int main(void) {
     iniciar_cola(&prioridad, 10, "PRIORIDAD");
     iniciar_cola(&normal, 15, "NORMAL");
-    iniciar_semaforo(&espacios_prioridad, 10);
-    iniciar_semaforo(&espacios_normal, 15);
-    iniciar_semaforo(&disponibles_finales, 0);
-    iniciar_semaforo(&mutex_finales, 1);
+    sem_init(&espacios_prioridad, 0, 10);
+    sem_init(&espacios_normal, 0, 15);
+    sem_init(&disponibles_finales, 0, 0);
+    sem_init(&mutex_finales, 0, 1);
 
     for (int i = 1; i <= 10; i++) agregar_prueba(i, 1);
     for (int i = 101; i <= 115; i++) agregar_prueba(i, 0);
@@ -46,14 +46,14 @@ int main(void) {
     esperar_id(205);
 
     finales_cerradas = 1;
-    avisar(&disponibles_finales);
+    sem_post(&disponibles_finales);
     Paquete paquete;
     assert(!retirar_para_despacho(&paquete));
     assert(prioridad.cantidad == 0 && normal.cantidad == 0);
-    destruir_semaforo(&espacios_prioridad);
-    destruir_semaforo(&espacios_normal);
-    destruir_semaforo(&disponibles_finales);
-    destruir_semaforo(&mutex_finales);
+    sem_destroy(&espacios_prioridad);
+    sem_destroy(&espacios_normal);
+    sem_destroy(&disponibles_finales);
+    sem_destroy(&mutex_finales);
     puts("Prioridad: secuencia 3:1, FIFO, cola unica, llegada tardia y cierre correctos.");
     return 0;
 }

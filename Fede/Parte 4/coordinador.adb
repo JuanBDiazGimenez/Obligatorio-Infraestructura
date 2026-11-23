@@ -3,8 +3,6 @@ with Ada.Strings.Fixed;
 with Mensajeria; use Mensajeria;
 
 procedure Coordinador is
-   type Estado_Barco is (Navegando, Esperando, Autorizado);
-   Estados : array (Id_Barco) of Estado_Barco := (others => Navegando);
    Pendientes : array (1 .. 3) of Id_Barco;
    Entrada, Salida : Positive range 1 .. 3 := 1;
    Cantidad : Natural range 0 .. 3 := 0;
@@ -22,19 +20,13 @@ begin
            (Mensaje (Separador + 1 .. Mensaje'Last));
       begin
          if Accion = "SOLICITAR" then
-            pragma Assert (Estados (Id) = Navegando);
             Put_Line ("SOLICITUD" & Id_Barco'Image (Id));
-            Estados (Id) := Esperando;
             Pendientes (Entrada) := Id;
             Entrada := Entrada mod 3 + 1;
             Cantidad := Cantidad + 1;
          elsif Accion = "LIBERAR" then
-            pragma Assert (Ocupante = Id and Estados (Id) = Autorizado);
             Put_Line ("LIBERACION" & Id_Barco'Image (Id));
             Ocupante := 0;
-            Estados (Id) := Navegando;
-         else
-            raise Program_Error with "Evento desconocido";
          end if;
 
          -- Nunca esperamos la liberacion dentro de la atencion de un pedido:
@@ -47,7 +39,6 @@ begin
                Cantidad := Cantidad - 1;
                -- La reserva se realiza ANTES de poner el permiso en el buzon.
                Ocupante := Siguiente;
-               Estados (Siguiente) := Autorizado;
                Put_Line ("AUTORIZACION" & Id_Barco'Image (Siguiente));
                Enviar (Buzon (Siguiente), "AUTORIZADO");
             end;

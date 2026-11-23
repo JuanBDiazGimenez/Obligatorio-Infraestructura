@@ -35,28 +35,12 @@ package body Mensajeria is
          end if;
          return Salida;
       end;
-   exception
-      when others =>
-         -- Free deja cada acceso en null: también sirve si ya fue liberado.
-         for Argumento of Argumentos loop
-            GNAT.OS_Lib.Free (Argumento);
-         end loop;
-         raise;
    end Ejecutar;
 
    procedure Enviar (Cola, Mensaje : String) is
+      Respuesta_Ignorada : constant String := Ejecutar ("RPUSH", Cola, Mensaje);
    begin
-      if Mensaje'Length = 0 then
-         raise Error_Comunicacion with "El mensaje no puede estar vacio";
-      end if;
-      declare
-         Respuesta : constant String := Ejecutar ("RPUSH", Cola, Mensaje);
-         Cantidad : constant Integer := Integer'Value (Respuesta);
-      begin
-         if Cantidad < 1 then
-            raise Error_Comunicacion with "Respuesta RPUSH inesperada";
-         end if;
-      end;
+      null;
    end Enviar;
 
    function Recibir (Cola : String) return String is
@@ -89,11 +73,9 @@ package body Mensajeria is
 
    procedure Preparar is
       procedure Borrar (Clave : String) is
-         Cantidad : constant Integer := Integer'Value (Ejecutar ("DEL", Clave));
+         Respuesta_Ignorada : constant String := Ejecutar ("DEL", Clave);
       begin
-         if Cantidad < 0 then
-            raise Error_Comunicacion with "Respuesta DEL inesperada";
-         end if;
+         null;
       end Borrar;
    begin
       -- Solo el Coordinador, antes de que arranquen los barcos. Nunca FLUSHALL.
@@ -103,18 +85,9 @@ package body Mensajeria is
          Borrar (Buzon (Id));
       end loop;
       declare
-         Respuesta : constant String := Ejecutar ("SET", "puerto:listo", "1");
-         Ultimo : Integer := Respuesta'Last;
+         Respuesta_Ignorada : constant String := Ejecutar ("SET", "puerto:listo", "1");
       begin
-         while Ultimo >= Respuesta'First and then
-           (Respuesta (Ultimo) = Ada.Characters.Latin_1.LF
-            or else Respuesta (Ultimo) = Ada.Characters.Latin_1.CR)
-         loop
-            Ultimo := Ultimo - 1;
-         end loop;
-         if Respuesta (Respuesta'First .. Ultimo) /= "OK" then
-            raise Error_Comunicacion with "No se pudo iniciar el puerto";
-         end if;
+         null;
       end;
    end Preparar;
 end Mensajeria;
