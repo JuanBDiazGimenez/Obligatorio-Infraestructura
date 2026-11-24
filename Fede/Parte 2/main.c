@@ -2,7 +2,6 @@
 #include <semaphore.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <unistd.h>
 
 #define RECEPTORES 4
@@ -227,7 +226,6 @@ int main(void) {
     pthread_t clasificadores[CLASIFICADORES], despachadores[DESPACHADORES];
     Trabajador datos_receptores[RECEPTORES], datos_escaneres[ESCANERES];
     Trabajador datos_clasificadores[CLASIFICADORES], datos_despachadores[DESPACHADORES];
-    srand(time(NULL));
 
     iniciar_zona(&zona1, "ZONA1");
     iniciar_zona(&zona2, "ZONA2");

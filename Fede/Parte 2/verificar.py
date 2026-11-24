@@ -103,7 +103,7 @@ def ejecutar(orden, limite=30):
 def preparar_copia(origen, destino, semilla=None, trazas=False, sin_demoras=False):
     texto = origen.read_text(encoding="utf-8")
     if semilla is not None:
-        texto = texto.replace("srand(time(NULL));", f"srand({semilla});")
+        texto = texto.replace("int main(void) {", f"int main(void) {{\n    srand({semilla});")
     if sin_demoras:
         texto = texto.replace("sleep(segundos);", "sleep(0 * segundos);")
     if trazas:

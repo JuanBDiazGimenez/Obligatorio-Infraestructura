@@ -14,7 +14,7 @@ Resumen del código actual, al 22/11/2026. Se consideran respaldo tanto las clas
 
 | Elemento | Explicación breve |
 | --- | --- |
-| `rand()`, `srand()` y `time(NULL)` | `rand()` obtiene un número pseudoaleatorio; el resto de la expresión lo acota al intervalo requerido. `srand(time(NULL))` inicializa una vez la secuencia usando la hora. Se trabajó el azar, pero no se localizó esa receta concreta; se eligió `rand()` con autorización de Fede. |
+| `rand()` y acotación al intervalo | `rand()` obtiene un número pseudoaleatorio y el resto de la expresión lo acota al intervalo requerido. Su uso fue autorizado por Fede. En ambas versiones de Parte 2 se retiraron `srand(time(NULL))` y `time.h`: no se encontró respaldo docente para esa inicialización y se comprobó la ejecución sin ella. Los verificadores solo introducen semillas explícitas en copias temporales para las pruebas internas. |
 | Estructuras C con `typedef struct` | Agrupan los campos de paquetes, colas, zonas y trabajadores bajo nombres propios. El concepto de registro aparece en el pseudocódigo del curso, pero no se localizó la declaración equivalente escrita en C. Es una adaptación de representación de datos; no se presenta como una nueva excepción expresamente aprobada en la conversación. |
 
 ## Parte 3 — Ada, ambas versiones
