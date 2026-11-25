@@ -108,6 +108,7 @@ buscar_dron() {
         read -r encabezado
         while IFS=, read -r ID CAT MODELO BATERIA DISP; do
             if [ "$ID" = "$1" ]; then
+                DISP=$(echo "$DISP" | sed 's/\r$//')
                 return 0
             fi
         done
@@ -117,7 +118,9 @@ buscar_dron() {
 
 mostrar_dron() {
     local estado="No disponible"
-    if [ "$5" = "Si" ]; then estado="Disponible"; fi
+    local disponibilidad
+    disponibilidad=$(echo "$5" | sed 's/\r$//')
+    if [ "$disponibilidad" = "Si" ]; then estado="Disponible"; fi
     echo "$1 - $2 - $3 - $4% - $estado"
 }
 

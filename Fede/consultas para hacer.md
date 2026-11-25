@@ -1,13 +1,5 @@
 # Consultas para hacer
 
-## Parte 1b: finales de línea del CSV (CRLF o LF)
-
-**Consulta al profesor:** ¿debemos hacer que el script admita también `flota.csv` con finales de línea de Windows (CRLF), o se espera trabajar con el archivo en formato Linux (LF) y no es necesario contemplar esa diferencia en el código?
-
-Al probar el instructivo en mi_ubuntu, Fede observó que no podía asignar COO-003 hasta actualizar su disponibilidad. La copia del repositorio tiene batería 88 y disponibilidad `Si`, pero sus líneas terminan con CRLF. Al leerla en Bash, el retorno de carro puede quedar pegado al último campo, por lo que la comparación con `Si` falla. Esto explica el síntoma, aunque no se inspeccionó directamente la copia de esa prueba en el contenedor.
-
-La alternativa propuesta es quitar únicamente el retorno de carro final del campo de disponibilidad mediante `sed 's/\r$//'`, al buscar el dron y al mostrarlo, sin reescribir el CSV. No se encontró esa normalización concreta enseñada. **No se implementó:** queda pendiente aclarar si debemos prevenir ese problema en el script o si basta con usar el CSV con finales LF. No se cambian los datos ni el código por ahora.
-
 ## Alcance de contenidos entre semestres
 
 **Consulta al profesor:** ¿se mantienen los mismos temas y criterios sobre los conceptos que podemos utilizar en este obligatorio respecto al semestre anterior? ¿Un concepto utilizado entonces sigue siendo válido ahora, siempre que corresponda al ejercicio y podamos explicar su funcionamiento?

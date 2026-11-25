@@ -92,7 +92,7 @@ de control acordados con Fede; no se atribuye al material un ejemplo idéntico.
 `local` mantiene separados los datos auxiliares durante la llamada. El patrón
 `[^[:space:]]` requiere al menos un carácter que no sea espacio en blanco. Ambos
 usos se conservan con autorización explícita. No se incorporan caracteres
-artificiales a las entradas ni una comprobación específica del retorno de carro.
+artificiales a las entradas. La disponibilidad leída del CSV se limpia como se explica al final para admitir LF y CRLF.
 El valor `-n` no supera la validación de texto actual; no se agregó un caso especial.
 
 ## Ejemplo completo desde los datos iniciales
@@ -161,7 +161,7 @@ PDF acompaña la propuesta para la entrega.
 
 ## Estado de la documentación
 
-Esta explicación corresponde al código actual y está sincronizada con su PDF.
+Este Markdown corresponde al código actual. El PDF de implementación queda pendiente de actualización por indicación de Fede.
 La revisión de respaldo quedó cerrada considerando el material, el script original
 y las decisiones explícitas tomadas con Fede. Las combinaciones de mecanismos y
 la organización del programa son adaptaciones propias, no una solución docente
@@ -173,3 +173,7 @@ sintaxis, registro y login, entradas inválidas, las cinco categorías, operacio
 reportes y persistencia. Se comprobaron también correlativos con ceros iniciales
 y cambios de cantidad de cifras, y los límites de asignación con batería 20 y 21.
 No se presenta esa verificación como una revisión humana del equipo.
+
+## Lectura de disponibilidad con LF y CRLF
+
+buscar_dron y mostrar_dron eliminan del valor de disponibilidad únicamente el retorno de carro final mediante `sed 's/\r$//'`. Esto permite interpretar Si/No en ambos finales de línea sin convertir el CSV original. sed proviene del script suministrado; esta aplicación concreta es una adaptación acordada. Comprobado en Git Bash y Ubuntu WSL con copias LF/CRLF el 25/11/2026; la lectura no reescribe el archivo.

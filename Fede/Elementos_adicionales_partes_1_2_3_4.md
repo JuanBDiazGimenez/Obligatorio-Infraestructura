@@ -10,11 +10,13 @@ Resumen del código actual, al 22/11/2026. Se consideran respaldo tanto las clas
 | `[:space:]` | Reconoce espacios en blanco, incluidas tabulaciones. Se usa para rechazar entradas formadas únicamente por esos caracteres. No se localizó esa clase concreta; Fede autorizó conservarla. |
 | Estados de funciones, `if !` y `while true` | Las búsquedas devuelven éxito o fracaso, `!` invierte una condición y los bucles repiten hasta retornar o salir. No se localizaron ejemplos idénticos en Bash; se conservaron por acuerdo como adaptaciones básicas de funciones y control de flujo. |
 
+La limpieza del retorno de carro final de disponibilidad con `sed 's/\r$//'` es una adaptación acordada para leer CSV LF y CRLF. El comando sed ya está en el original provisto; la expresión específica no se atribuye a clase. Se aplica al valor leído, sin convertir el archivo.
+
 ## Parte 2 — C, ambas versiones
 
 | Elemento | Explicación breve |
 | --- | --- |
-| `rand()` y acotación al intervalo | `rand()` obtiene un número pseudoaleatorio y el resto de la expresión lo acota al intervalo requerido. Su uso fue autorizado por Fede. En ambas versiones de Parte 2 se retiraron `srand(time(NULL))` y `time.h`: no se encontró respaldo docente para esa inicialización y se comprobó la ejecución sin ella. Los verificadores solo introducen semillas explícitas en copias temporales para las pruebas internas. |
+| `rand()` y acotación al intervalo | `rand()` obtiene un número pseudoaleatorio y el resto de la expresión lo acota al intervalo requerido. Su uso fue autorizado por Fede. |
 | Estructuras C con `typedef struct` | Agrupan los campos de paquetes, colas, zonas y trabajadores bajo nombres propios. El concepto de registro aparece en el pseudocódigo del curso, pero no se localizó la declaración equivalente escrita en C. Es una adaptación de representación de datos; no se presenta como una nueva excepción expresamente aprobada en la conversación. |
 
 ## Parte 3 — Ada, ambas versiones
