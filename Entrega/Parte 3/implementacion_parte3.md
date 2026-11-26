@@ -34,13 +34,13 @@ Asignar el octavo partido no termina el torneo: cada cancha debe informar su res
 
 ## Ejecución y base del enfoque
 
-Con GNAT instalado:
+Desde la carpeta que contiene `torneo.adb`, con GNAT instalado:
 
 ```bash
 gnatmake torneo.adb
 ./torneo
 ```
 
-Los instructivos de esta carpeta detallan los entornos Ubuntu y Windows nativo. Al revisar una ejecución deben aparecer ocho asignaciones únicas, ocho resultados con un ganador perteneciente al partido y la terminación de las tres canchas. El orden de las canchas y las finalizaciones puede variar.
+Al revisar una ejecución deben aparecer ocho asignaciones únicas, ocho resultados con un ganador perteneciente al partido y la terminación de las tres canchas. El orden de las canchas y las finalizaciones puede variar.
 
 La letra, páginas 9–10 de `Infraestructura Obligatorio Agosto 2026 (1).pdf`, requiere las cuatro tasks, las citas y la finalización tras disputar los ocho partidos. `8. ADA (1) (1).pdf` (material de clase), diapositiva 22, explica la espera de la task que llama durante el rendezvous; las diapositivas 27 y 37 presentan `select` y `task type`. La asignación de partidos, las dos entradas y la respuesta cero son la adaptación de estos mecanismos al torneo.

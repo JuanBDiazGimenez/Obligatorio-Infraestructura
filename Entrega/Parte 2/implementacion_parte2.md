@@ -36,13 +36,13 @@ Como decisiones adicionales, se utiliza `rand()` para obtener valores pseudoalea
 
 Las declaraciones `typedef struct` agrupan campos relacionados y les dan nombres como `Paquete`, `Cola`, `Zona` y `Trabajador`. Esto permite pasar un paquete completo entre etapas y reunir los datos de cada cola con sus semáforos. El concepto de registro aparece en el pseudocódigo de Semáforos, diapositivas 16 y 22, pero no se localizó esa declaración concreta en C en el material revisado. Es una adaptación de la representación de datos, no un mecanismo adicional de sincronización.
 
-En Ubuntu, con GCC y soporte POSIX:
+Desde la carpeta que contiene `main.c`, en Ubuntu con GCC y soporte POSIX:
 
 ```bash
 gcc -Wall -Wextra -pthread main.c -o paquetes
 ./paquetes
 ```
 
-Para Windows nativo y las comprobaciones manuales, consultar los instructivos de esta carpeta. El resultado esperado es 300 paquetes únicos que completan todas las etapas y un resumen de 300 generados y 300 despachados. La traza de inicio permite revisar la regla de prioridad; por sí solas, las finalizaciones no muestran el orden de selección.
+El resultado esperado es 300 paquetes únicos que completan todas las etapas y un resumen de 300 generados y 300 despachados. La traza de inicio permite revisar la regla de prioridad; por sí solas, las finalizaciones no muestran el orden de selección.
 
 La letra, páginas 7–8 de `Infraestructura Obligatorio Agosto 2026 (1).pdf`, fija etapas, capacidades y regla de prioridad. `6. Semaforos Version Marzo (1).pdf` (material de clase), diapositivas 9–10 y 24–25, presenta buffers FIFO, exclusión y procesos consumidores de un buffer y productores de otro. Las cuatro etapas, el cierre y el contador global son la adaptación de esos mecanismos a este ejercicio.

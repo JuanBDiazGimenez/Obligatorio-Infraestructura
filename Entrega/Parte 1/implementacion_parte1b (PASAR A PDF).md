@@ -2,14 +2,12 @@
 
 ## Ejecución y archivos
 
-Ejecutar con Bash en Linux o Git Bash:
+Abrir una terminal en la carpeta que contiene `don_drones.sh` y `flota.csv`. Ejecutar con Bash en Linux o Git Bash:
 
 ```bash
-cd "Fede/Parte 1"
 bash don_drones.sh
 ```
 
-Los comandos anteriores parten de la raíz del repositorio.
 Para ejecución directa en Linux: `chmod +x don_drones.sh` y `./don_drones.sh`.
 El script se entrega con finales LF. Usa Bash y comandos `grep`, `cut`, `sed` y `echo`. No requiere Python ni otro lenguaje para funcionar.
 
@@ -124,26 +122,26 @@ El valor `-n` no supera la validación de texto actual; no se agregó un caso es
 
 - Letra `Infraestructura Obligatorio Agosto 2026 (1).pdf`, páginas 3–5: reutilización
   de 1.a, menús, usuarios, operaciones, persistencia y documentación.
-- `Apuntes/09-08 Infraestructura y Procesos en C.md`, sección 3, «Automatización
+- apunte «Infraestructura y Procesos en C», del 08/09, sección 3, «Automatización
   mediante Scripts en Bash»: funciones, variables, `read`, `if`, operadores
   numéricos y bucles. Es un apunte del curso, no una implementación oficial.
-- `Material de clase/Laboratorios Infra (1).pdf`, páginas 13–16, parte 3:
+- material «Laboratorios Infra», del curso, páginas 13–16, parte 3:
   funciones, lectura desde teclado y escritura en archivos. El documento se titula
   «Solución laboratorio 1», pero no se comprobó la autoría de sus soluciones;
   no se presenta como una solución oficial del docente ni del obligatorio.
-- `Transcripciones/Infra 09-29.txt`, sección de Parte 1: el docente explica que el
+- clase del 29/09, sección de Parte 1: el docente explica que el
   material es una base y permite investigar mecanismos adicionales. La transcripción
   dice 90 % al leer batería crítica; se usa el 20 % explícito del PDF y del script
   base, sin tratar ese pasaje transcrito como una modificación oficial.
-- `Material de clase/2. Sistema de archivos.pptx (3).pdf`, diapositivas 79-85,
+- presentación «Sistema de archivos», del curso, diapositivas 79-85,
   87 y 89-100: salida con echo, funciones, condicionales, bucles, lectura y regex
   con grep -E. Se adaptan estos mecanismos a menús, validaciones y correlativos.
-- `Transcripciones/Infra 08-18.txt`, líneas 1180-1185: rutas relativas para
+- clase del 18/08, explicación sobre rutas relativas: rutas relativas para
   conjuntos de archivos que se trasladan juntos. Aquí se requiere ejecutar desde
   la carpeta que contiene el script y los CSV.
-- `Parte 1a/don_drones_manager.sh`: referencia provista para case, sustitución de
+- script original `don_drones_manager.sh` provisto en la letra: referencia provista para case, sustitución de
   comandos, lectura CSV, cut y actualización con sed -i.
-- `Parte 1a/don_drones_manager_fix.sh` y `parte1a_problema1_Fede.md`: base corregida
+- `don_drones_manager_fix.sh` y el informe de diagnóstico de la parte 1a: base corregida
   del equipo para el contador y la comparación. No se modifican desde la extensión.
 
 La distribución en funciones, el archivo de usuarios, el cálculo del mayor ID y
