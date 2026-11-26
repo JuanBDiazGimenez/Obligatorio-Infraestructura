@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <time.h>
 #include <pthread.h>
 
 int totalPaquetes = 300;
@@ -85,7 +84,6 @@ paquete extraer(buffer *b)
 void *receptor(void *arg)
 {
     int num = *(int *)arg;
-    srand(time(NULL) + num);
     while (1)
     {
         sem_wait(&mutexGenerados);
@@ -112,7 +110,6 @@ void *receptor(void *arg)
 void *escaner(void *arg)
 {
     int num = *(int *)arg;
-    srand(time(NULL) + num);
     while (1)
     {
         sem_wait(&mutexEscaneados);
@@ -136,7 +133,6 @@ void *escaner(void *arg)
 void *clasificador(void *arg)
 {
     int num = *(int *)arg;
-    srand(time(NULL) + num);
     while (1)
     {
         sem_wait(&mutexClasificados);
@@ -167,7 +163,6 @@ void *clasificador(void *arg)
 void *despachador(void *arg)
 {
     int num = *(int *)arg;
-    srand(time(NULL) + num);
     while (1)
     {
         sem_wait(&mutexDespachados);
@@ -207,7 +202,6 @@ void *despachador(void *arg)
 
 int main()
 {
-    srand(time(NULL));
 
     sem_init(&mutexGenerados, 0, 1);
     sem_init(&mutexEscaneados, 0, 1);
