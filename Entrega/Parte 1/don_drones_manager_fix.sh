@@ -13,14 +13,11 @@ case $ACCION in
 
     bateria_critica)
         CONTADOR=0
-        {
-            read -r LINEA
-            while IFS=, read -r ID CAT MODELO BATERIA DISP; do
-                if [ "$BATERIA" -lt "20" ]; then
-                    CONTADOR=$((CONTADOR + 1))
-                fi
-            done
-        } < "$ARCHIVO_FLOTA"
+        while IFS=, read -r ID CAT MODELO BATERIA DISP; do
+            if [ "$BATERIA" -lt "20" ]; then
+                CONTADOR=$((CONTADOR + 1))
+            fi
+        done < <(tail -n +2 "$ARCHIVO_FLOTA")
         echo "Drones con batería crítica: $CONTADOR"
         ;;
 
